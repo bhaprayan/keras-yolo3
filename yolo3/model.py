@@ -402,6 +402,11 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
             (1-object_mask) * K.binary_crossentropy(object_mask, raw_pred[...,4:5], from_logits=True) * ignore_mask
         class_loss_grid = object_mask * K.binary_crossentropy(true_class_probs, raw_pred[...,5:], from_logits=True)
 
+        if print_loss:
+            xy_loss_grid = tf.Print(xy_loss_grid, [xy_loss_grid.shape], message="xy_loss_grid.shape: ")
+            wh_loss_grid = tf.Print(wh_loss_grid, [wh_loss_grid.shape], message="wh_loss_grid.shape: ")
+            class_loss_grid = tf.Print(class_loss_grid, [class_loss_grid.shape], message="class_loss_grid.shape: ")
+
         xy_loss = K.sum(xy_loss_grid) / mf
         wh_loss = K.sum(wh_loss_grid) / mf
         confidence_loss = K.sum(confidence_loss_grid) / mf
