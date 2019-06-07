@@ -1,0 +1,27 @@
+Cars
+Police Car
+Truck
+Fire Truck
+Ambulance
+SemiCab
+SemiTrailer
+Bus
+School Bus
+OtherVehicle
+Pedestrian
+Sliding Pedestrian
+Stroller
+Cyclist
+Motorcyclist
+OtherCyclist
+NO LABEL
+Pets
+Bird
+Garbage Bins and Dumpsters
+Cones and Short Poles
+Construction Zone Signs and Construction Sign Boards
+Pedestrian with Object
+Trailer
+Manipulated Object
+Shopping Cart
+Shopping Cart Crowd
