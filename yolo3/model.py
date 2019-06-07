@@ -414,6 +414,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         loss += xy_loss + wh_loss + confidence_loss + class_loss
         if print_loss:
             loss = tf.Print(loss, [loss, xy_loss, wh_loss, confidence_loss, class_loss, K.sum(ignore_mask)], message='loss: ')
+    return loss
     # return dict(
     #     loss=loss,
     #     xy_loss_grid=xy_loss_grid,
