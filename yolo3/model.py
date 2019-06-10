@@ -341,6 +341,15 @@ def box_iou(b1, b2):
 
     return iou
 
+def tf_print(op, tensors, message=None):
+    def print_message(x):
+        sys.stdout.write(message + " %s\n" % x)
+        return x
+
+    prints = [tf.py_func(print_message, [tensor], tensor.dtype) for tensor in tensors]
+    with tf.control_dependencies(prints):
+        op = tf.identity(op)
+    return op
 
 def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
     '''Return yolo_loss tensor
@@ -403,9 +412,9 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         class_loss_grid = object_mask * K.binary_crossentropy(true_class_probs, raw_pred[...,5:], from_logits=True)
 
         if print_loss:
-            xy_loss_grid = tf.Print(xy_loss_grid, [tf.shape(xy_loss_grid)], message="xy_loss_grid.shape: ")
-            wh_loss_grid = tf.Print(wh_loss_grid, [tf.shape(wh_loss_grid)], message="wh_loss_grid.shape: ")
-            class_loss_grid = tf.Print(class_loss_grid, [tf.shape(class_loss_grid)], message="class_loss_grid.shape: ")
+            xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ")
+            wh_loss_grid = tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ")
+            class_loss_grid = tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ")
 
         xy_loss = K.sum(xy_loss_grid) / mf
         wh_loss = K.sum(wh_loss_grid) / mf
@@ -414,10 +423,10 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         loss += xy_loss + wh_loss + confidence_loss + class_loss
         if print_loss:
             loss = tf.Print(loss, [loss, xy_loss, wh_loss, confidence_loss, class_loss, K.sum(ignore_mask)], message='loss: ')
-    # return loss
-    return dict(
-        loss=loss,
-        xy_loss_grid=xy_loss_grid,
-        wh_loss_grid=wh_loss_grid,
-        class_loss_grid=class_loss_grid,
-        )
+    return loss
+    # return dict(
+    #     loss=loss,
+    #     xy_loss_grid=xy_loss_grid,
+    #     wh_loss_grid=wh_loss_grid,
+    #     class_loss_grid=class_loss_grid,
+    #     )
