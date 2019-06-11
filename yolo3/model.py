@@ -1,6 +1,7 @@
 """YOLO_v3 Model Defined in Keras."""
 
 from functools import wraps
+import sys
 
 import numpy as np
 import tensorflow as tf
@@ -12,7 +13,6 @@ from keras.models import Model
 from keras.regularizers import l2
 
 from yolo3.utils import compose
-
 
 @wraps(Conv2D)
 def DarknetConv2D(*args, **kwargs):
@@ -351,7 +351,7 @@ def tf_print(op, tensors, message=None):
         op = tf.identity(op)
     return op
 
-def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
+def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     '''Return yolo_loss tensor
 
     Parameters
@@ -415,6 +415,8 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
             xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ")
             wh_loss_grid = tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ")
             class_loss_grid = tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ")
+            # xy_loss_grid = K.print_tensor(xy_loss_grid, message='xy_loss_grid')
+            # print('Hello world')
 
         xy_loss = K.sum(xy_loss_grid) / mf
         wh_loss = K.sum(wh_loss_grid) / mf
@@ -423,10 +425,10 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         loss += xy_loss + wh_loss + confidence_loss + class_loss
         if print_loss:
             loss = tf.Print(loss, [loss, xy_loss, wh_loss, confidence_loss, class_loss, K.sum(ignore_mask)], message='loss: ')
-    return loss
-    # return dict(
-    #     loss=loss,
-    #     xy_loss_grid=xy_loss_grid,
-    #     wh_loss_grid=wh_loss_grid,
-    #     class_loss_grid=class_loss_grid,
-    #     )
+    # return loss
+    return dict(
+        loss=loss,
+        xy_loss_grid=xy_loss_grid,
+        wh_loss_grid=wh_loss_grid,
+        class_loss_grid=class_loss_grid,
+        )
