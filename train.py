@@ -104,8 +104,11 @@ def get_anchors(anchors_path):
 def model_loss_lambda(*args, **kwargs):
     return yolo_loss(*args, **kwargs)['loss']
 
+def model_grid_loss_lambda(*args, **kwargs):
+    return yolo_loss(*args, **kwargs)['loss'], yolo_loss(*args, **kwargs)['xy_loss_grid'], yolo_loss(*args, **kwargs)['wh_loss_grid']
+
 def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
-            weights_path='model_data/yolo_weights.h5'):
+            weights_path='model_data/yolo_weights.h5', grid_loss=False):
     '''create the training model'''
     K.clear_session() # get a new session
     image_input = Input(shape=(None, None, 3))
@@ -126,10 +129,14 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
             num = (185, len(model_body.layers)-3)[freeze_body-1]
             for i in range(num): model_body.layers[i].trainable = False
             print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
-
-    model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
-        arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
-        [*model_body.output, *y_true])
+    if grid_loss:
+        model_loss = Lambda(model_grid_loss_lambda, output_shape=(1,), name='yolo_loss',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+    else:
+        model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
     model = Model([model_body.input, *y_true], model_loss)
 
     return model
