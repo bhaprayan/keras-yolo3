@@ -17,8 +17,7 @@ num_anchors = len(anchors)
 
 input_shape = (416,416) # multiple of 32, hw
 
-model = create_model(input_shape, anchors, num_classes, 
-freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
+# model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path='model_data/yolo_weights.h5') # make sure you know what you freeze
 
 logging = TensorBoard(log_dir=log_dir)
 checkpoint = ModelCheckpoint(log_dir + 'ep{epoch:03d}-loss{loss:.3f}-val_loss{val_loss:.3f}.h5',
@@ -35,9 +34,8 @@ np.random.shuffle(lines)
 np.random.seed(None)
 num_val = int(len(lines)*val_split)
 num_train = len(lines) - num_val
-model.compile(optimizer=Adam(lr=1e-3), loss={
-    # use custom yolo_loss Lambda layer.
-    'yolo_loss': lambda y_true, y_pred: y_pred})
+# model.compile(optimizer=Adam(lr=1e-3), loss={
+    # use custom yolo_loss Lambda layer.'yolo_loss': lambda y_true, y_pred: y_pred})
 
 batch_size = 32
 print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
@@ -64,15 +62,15 @@ FLAGS = {
         "gpu_num" : 1,
     }
 
-model = YOLO(**vars(FLAGS))
+model = YOLO()
 
-image_base_path = '/home/shuby.deshpande/workspace/keras-yolo3/data/5cc3a5ef4e436f43f7b5615f/images'
+image_base_path = '/home/shuby.deshpande/workspace/keras-yolo3/data/5cc3a5ef4e436f43f7b5615f/images/*'
 image_paths = glob.glob(image_base_path)
-for image_path in image_paths:
-    image = Image.open(image_path)
+for image_path in range(len(image_paths)):
+    image = Image.open(image_paths[image_path])
     pred = model.detect_image(image)
-    image_name = image_path.split('.')[0] + '_pred.jpeg'
+    image_name =  str(image_path)+'_pred.jpeg'
     print('-'*50)
     print('Predicting bbox for image:', image_path)
     print('-'*50)
-    plt.imsave(image_name, pred)
+    pred.save(image_name)
