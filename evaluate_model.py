@@ -10,6 +10,9 @@ from train import *
 from yolo import YOLO, detect_video
 from yolo3.utils import letterbox_image
 
+import ipdb
+
+
 annotation_path = 'train_nuro.txt'
 log_dir = 'logs/000/'
 classes_path = 'model_data/classes.txt'
@@ -29,8 +32,10 @@ num_train = len(lines) - num_val
 batch_size = 32
 print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
 
+# ipdb.set_trace()
+
 model = create_model(input_shape, anchors, num_classes,
-            freeze_body=2, weights_path=model_path, grid_loss=True)
+            freeze_body=2, weights_path=model_path, grid_loss=False)
 
 model.compile(optimizer=Adam(lr=1e-3), loss={
             # use custom yolo_loss Lambda layer.

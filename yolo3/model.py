@@ -5,6 +5,7 @@ import sys
 
 import numpy as np
 import tensorflow as tf
+import ipdb
 from keras import backend as K
 from keras.layers import Conv2D, Add, ZeroPadding2D, UpSampling2D, Concatenate, MaxPooling2D
 from keras.layers.advanced_activations import LeakyReLU
@@ -351,6 +352,17 @@ def tf_print(op, tensors, message=None):
         op = tf.identity(op)
     return op
 
+def tf_save_tensor(op, tensors, message=None):
+    def save_tensor(x):
+        sys.stdout.write("saving tensor") 
+        np.save('test.npy', x)
+        return x
+
+    prints = [tf.py_func(save_tensor, [tensor], tensor.dtype) for tensor in tensors]
+    with tf.control_dependencies(prints):
+        op = tf.identity(op)
+    return op
+
 def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     '''Return yolo_loss tensor
 
@@ -410,13 +422,16 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
         confidence_loss_grid = object_mask * K.binary_crossentropy(object_mask, raw_pred[...,4:5], from_logits=True)+ \
             (1-object_mask) * K.binary_crossentropy(object_mask, raw_pred[...,4:5], from_logits=True) * ignore_mask
         class_loss_grid = object_mask * K.binary_crossentropy(true_class_probs, raw_pred[...,5:], from_logits=True)
+        
+        # ipdb.set_trace()
 
         if print_loss:
             xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ")
-            wh_loss_grid = tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ")
-            class_loss_grid = tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ")
-            # xy_loss_grid = K.print_tensor(xy_loss_grid, message='xy_loss_grid')
-            # print('Hello world')
+            
+            xy_loss_grid = tf_save_tensor(xy_loss_grid, [xy_loss_grid])
+
+            # xy_loss_grid = tf_print(xy_loss_grid, [xy_loss_grid], "xy_loss_grid: ")
+            # print('xy_loss_grid type:', type(xy_loss_grid.eval()))
 
         xy_loss = K.sum(xy_loss_grid) / mf
         wh_loss = K.sum(wh_loss_grid) / mf
@@ -425,6 +440,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
         loss += xy_loss + wh_loss + confidence_loss + class_loss
         if print_loss:
             loss = tf.Print(loss, [loss, xy_loss, wh_loss, confidence_loss, class_loss, K.sum(ignore_mask)], message='loss: ')
+
     # return loss
     return dict(
         loss=loss,
