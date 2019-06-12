@@ -354,8 +354,9 @@ def tf_print(op, tensors, message=None):
 
 def tf_save_tensor(op, tensors, message=None):
     def save_tensor(x):
-        sys.stdout.write("saving tensor") 
-        np.save('test.npy', x)
+        sys.stdout.write("saving tensor")
+        t_id = x.shape[1] # image scale
+        np.save('test.npy'+t_id, x)
         return x
 
     prints = [tf.py_func(save_tensor, [tensor], tensor.dtype) for tensor in tensors]
