@@ -29,10 +29,8 @@ with open(annotation_path) as f:
     lines = f.readlines()
 num_val = int(len(lines)*val_split)
 num_train = len(lines) - num_val
-batch_size = 32
+batch_size = 1
 print('Train on {} samples, val on {} samples, with batch size {}.'.format(num_train, num_val, batch_size))
-
-# ipdb.set_trace()
 
 model = create_model(input_shape, anchors, num_classes,
             freeze_body=2, weights_path=model_path, grid_loss=False)
@@ -41,4 +39,7 @@ model.compile(optimizer=Adam(lr=1e-3), loss={
             # use custom yolo_loss Lambda layer.
             'yolo_loss': lambda y_true, y_pred: y_pred})
 
-model.evaluate_generator(data_generator_wrapper(lines[:num_train], batch_size, input_shape, anchors, num_classes), steps=1)
+# ipdb.set_trace()
+
+model.evaluate_generator(data_generator_wrapper(lines[:num_train], batch_size, input_shape, anchors, num_classes), steps=1, max_queue_size=1)
+# Turns out setting queue size to n fetches data n times in the beginning 

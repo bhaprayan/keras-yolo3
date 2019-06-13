@@ -352,11 +352,11 @@ def tf_print(op, tensors, message=None):
         op = tf.identity(op)
     return op
 
-def tf_save_tensor(op, tensors, message=None):
+def tf_save_tensor(op, tensors, tensor_type=None):
     def save_tensor(x):
         sys.stdout.write("saving tensor")
         t_id = str(x.shape[1]) # image scale
-        np.save('test_'+t_id+'.npy', x)
+        np.save(tensor_type+'_test_'+t_id+'.npy', x)
         return x
 
     prints = [tf.py_func(save_tensor, [tensor], tensor.dtype) for tensor in tensors]
@@ -381,8 +381,11 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
 
     '''
     num_layers = len(anchors)//3 # default setting
+    print('Args length:', args)
     yolo_outputs = args[:num_layers]
     y_true = args[num_layers:]
+    batch_details = args[-1]
+    print('Batch details: ', batch_details)
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]
     input_shape = K.cast(K.shape(yolo_outputs[0])[1:3] * 32, K.dtype(y_true[0]))
     grid_shapes = [K.cast(K.shape(yolo_outputs[l])[1:3], K.dtype(y_true[0])) for l in range(num_layers)]
@@ -427,9 +430,14 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
         # ipdb.set_trace()
 
         if print_loss:
-            xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ")
+            xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ") 
+            xy_loss_grid = tf_save_tensor(xy_loss_grid, [xy_loss_grid], "xy_loss_grid")
             
-            xy_loss_grid = tf_save_tensor(xy_loss_grid, [xy_loss_grid])
+            wh_loss_grid = tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ") 
+            wh_loss_grid = tf_save_tensor(wh_loss_grid, [wh_loss_grid], "wh_loss_grid")
+            
+            class_loss_grid = tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ") 
+            class_loss_grid = tf_save_tensor(class_loss_grid, [class_loss_grid], "class_loss_grid")
 
             # xy_loss_grid = tf_print(xy_loss_grid, [xy_loss_grid], "xy_loss_grid: ")
             # print('xy_loss_grid type:', type(xy_loss_grid.eval()))

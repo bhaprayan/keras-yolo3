@@ -109,3 +109,6 @@ ENV/
 
 # vscode
 .vscode/
+
+# np data file
+*npy

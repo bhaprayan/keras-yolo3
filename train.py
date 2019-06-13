@@ -140,6 +140,8 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
     y_true = [Input(shape=(h//{0:32, 1:16, 2:8}[l], w//{0:32, 1:16, 2:8}[l], \
         num_anchors//3, num_classes+5)) for l in range(3)]
 
+    # batch_details = K.placeholder(shape=(1,))
+
     model_body = yolo_body(image_input, num_anchors//3, num_classes)
     print('Create YOLOv3 model with {} anchors and {} classes.'.format(num_anchors, num_classes))
 
@@ -203,8 +205,9 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
         batch_data = []
         for b in range(batch_size):
             if i==0:
-                np.random.shuffle(annotation_lines)
-            image, box = get_random_data(annotation_lines[i], input_shape, random=True)
+                pass
+                # np.random.shuffle(annotation_lines) removing random shuffle for now
+            image, box = get_random_data(annotation_lines[i], input_shape, random=False)
             image_data.append(image)
             box_data.append(box)
             batch_data.append(annotation_lines[i])
@@ -212,8 +215,10 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
         image_data = np.array(image_data)
         box_data = np.array(box_data)
         y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes)
-        print('Generated batch:', batch_data)
+        # print('y_true', y_true)
         yield [image_data, *y_true], np.zeros(batch_size)
+        print('Generated batch:', batch_data)
+
 
 def data_generator_wrapper(annotation_lines, batch_size, input_shape, anchors, num_classes):
     n = len(annotation_lines)
