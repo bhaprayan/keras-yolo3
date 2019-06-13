@@ -230,7 +230,7 @@ def yolo_eval(yolo_outputs,
     return boxes_, scores_, classes_
 
 
-def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes):
+def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_data):
     '''Preprocess true boxes to training input format
 
     Parameters
@@ -298,7 +298,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes):
                     y_true[l][b, j, i, k, 0:4] = true_boxes[b,t, 0:4]
                     y_true[l][b, j, i, k, 4] = 1
                     y_true[l][b, j, i, k, 5+c] = 1
-
+    y_true.append(batch_data)
     return y_true
 
 
@@ -383,7 +383,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     num_layers = len(anchors)//3 # default setting
     print('Args length:', args)
     yolo_outputs = args[:num_layers]
-    y_true = args[num_layers:]
+    y_true = args[num_layers:-1]
     batch_details = args[-1]
     print('Batch details: ', batch_details)
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]

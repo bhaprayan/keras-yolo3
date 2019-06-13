@@ -214,8 +214,9 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
             i = (i+1) % n
         image_data = np.array(image_data)
         box_data = np.array(box_data)
-        y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes)
-        # print('y_true', y_true)
+        y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
+        print('len(y_true): ', len(y_true))
+        # print('Batch data:', y_true[-1])
         yield [image_data, *y_true], np.zeros(batch_size)
         print('Generated batch:', batch_data)
 
