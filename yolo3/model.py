@@ -15,6 +15,8 @@ from keras.regularizers import l2
 
 from yolo3.utils import compose
 
+# UUID = 0
+
 @wraps(Conv2D)
 def DarknetConv2D(*args, **kwargs):
     """Wrapper to set Darknet parameters for Convolution2D."""
@@ -246,6 +248,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
     y_true: list of array, shape like yolo_outputs, xywh are reletive value
 
     '''
+    print('Batch data: ', batch_data)
     assert (true_boxes[..., 4]<num_classes).all(), 'class id must be less than num_classes'
     num_layers = len(anchors)//3 # default setting
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]
@@ -298,7 +301,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
                     y_true[l][b, j, i, k, 0:4] = true_boxes[b,t, 0:4]
                     y_true[l][b, j, i, k, 4] = 1
                     y_true[l][b, j, i, k, 5+c] = 1
-    y_true.append(batch_data)
+    # y_true.append(batch_data)
     return y_true
 
 
@@ -352,11 +355,11 @@ def tf_print(op, tensors, message=None):
         op = tf.identity(op)
     return op
 
-def tf_save_tensor(op, tensors, tensor_type=None):
+def tf_save_tensor(op, tensors, tensor_type=None, UUID=None):
     def save_tensor(x):
-        sys.stdout.write("saving tensor")
+        sys.stdout.write("saving tensor" + str(UUID))
         t_id = str(x.shape[1]) # image scale
-        np.save(tensor_type+'_test_'+t_id+'.npy', x)
+        np.save(tensor_type+'_test_'+t_id+'_UUID_'+str(UUID)+'.npy', x)
         return x
 
     prints = [tf.py_func(save_tensor, [tensor], tensor.dtype) for tensor in tensors]
@@ -383,9 +386,9 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     num_layers = len(anchors)//3 # default setting
     print('Args length:', args)
     yolo_outputs = args[:num_layers]
-    y_true = args[num_layers:-1]
-    batch_details = args[-1]
-    print('Batch details: ', batch_details)
+    y_true = args[num_layers:]
+    # batch_details = args[-1]
+    # print('Batch details: ', batch_details)
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]
     input_shape = K.cast(K.shape(yolo_outputs[0])[1:3] * 32, K.dtype(y_true[0]))
     grid_shapes = [K.cast(K.shape(yolo_outputs[l])[1:3], K.dtype(y_true[0])) for l in range(num_layers)]
@@ -431,17 +434,18 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
 
         if print_loss:
             xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ") 
-            xy_loss_grid = tf_save_tensor(xy_loss_grid, [xy_loss_grid], "xy_loss_grid")
+            # xy_loss_grid = tf_save_tensor(xy_loss_grid, [xy_loss_grid], "xy_loss_grid", UUID)
             
             wh_loss_grid = tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ") 
-            wh_loss_grid = tf_save_tensor(wh_loss_grid, [wh_loss_grid], "wh_loss_grid")
+            # wh_loss_grid = tf_save_tensor(wh_loss_grid, [wh_loss_grid], "wh_loss_grid", UUID)
             
             class_loss_grid = tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ") 
-            class_loss_grid = tf_save_tensor(class_loss_grid, [class_loss_grid], "class_loss_grid")
+            # class_loss_grid = tf_save_tensor(class_loss_grid, [class_loss_grid], "class_loss_grid", UUID)
 
             # xy_loss_grid = tf_print(xy_loss_grid, [xy_loss_grid], "xy_loss_grid: ")
             # print('xy_loss_grid type:', type(xy_loss_grid.eval()))
 
+        # UUID += 1 # hack. can't think of a better way.
         xy_loss = K.sum(xy_loss_grid) / mf
         wh_loss = K.sum(wh_loss_grid) / mf
         confidence_loss = K.sum(confidence_loss_grid) / mf

@@ -218,7 +218,7 @@ def data_generator(annotation_lines, batch_size, input_shape, anchors, num_class
         print('len(y_true): ', len(y_true))
         # print('Batch data:', y_true[-1])
         yield [image_data, *y_true], np.zeros(batch_size)
-        print('Generated batch:', batch_data)
+        # print('Generated batch:', batch_data)
 
 
 def data_generator_wrapper(annotation_lines, batch_size, input_shape, anchors, num_classes):
