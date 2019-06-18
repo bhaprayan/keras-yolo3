@@ -41,9 +41,9 @@ box_data = np.array(box_data)
 
 y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
 
-# model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
+model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
-model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
+# model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 
 # K.clear_session()
 
@@ -72,10 +72,9 @@ image_data = np.expand_dims(image_data, 0)
 
 # i = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
 
-i = sess.run(model.output, feed_dict={model.input: image_data})
+# i = sess.run(*model.output, feed_dict={model.input: image_data})
 
-
-print(i)
+# print(i)
 # outputs = [i, j, k]
 
 # total_loss = yolo_loss([*outputs, *y_true], anchors, num_classes, ignore_thresh=0.5)

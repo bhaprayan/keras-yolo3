@@ -117,6 +117,10 @@ def model_loss_lambda(*args, **kwargs):
 
 def model_grid_loss_lambda(*args, **kwargs):
     dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['loss']
+
+def model_grid_loss_xy_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
     # xy_loss_grid = dict_loss['xy_loss_grid']
     # wh_loss_grid = dict_loss['wh_loss_grid']
     # class_loss_grid = dict_loss['class_loss_grid']
@@ -127,7 +131,18 @@ def model_grid_loss_lambda(*args, **kwargs):
     # tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ")
     # tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ")
     # print('xy_loss_grid:', dict_loss['xy_loss_grid'], 'wh_loss_grid:', dict_loss['wh_loss_grid']) 
-    return [dict_loss['xy_loss_grid'], dict_loss['wh_loss_grid'], dict_loss['class_loss_grid']]
+    # var = np.array([*dict_loss['xy_loss_grid'], *dict_loss['wh_loss_grid'], *dict_loss['class_loss_grid']])
+    # return K.variable(value=var)
+    return dict_loss['xy_loss_grid']
+
+def model_grid_loss_wh_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['wh_loss_grid']
+
+def model_grid_loss_class_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['class_loss_grid']
+
 
 def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
             weights_path='model_data/yolo_weights.h5', grid_loss=False):
@@ -154,15 +169,17 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
             for i in range(num): model_body.layers[i].trainable = False
             print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
     if grid_loss:
-        model_loss = Lambda(model_grid_loss_lambda, output_shape=(1, ), name='yolo_loss',
+        model_loss = Lambda(model_grid_loss_wh_lambda, output_shape=(1, ), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
+        
+        model = Model([model_body.input, *y_true], model_loss)    
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
-    model = Model([model_body.input, *y_true], model_loss)
-
+            
+        model = Model([model_body.input, *y_true], model_loss)
     return model
 
 def create_tiny_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
@@ -219,19 +236,30 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
             num = (185, len(model_body.layers)-3)[freeze_body-1]
             for i in range(num): model_body.layers[i].trainable = False
             print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
+
     if grid_loss:
-        # output shape doesn't matter for TF (auto inferred)
-        model_loss = Lambda(model_grid_loss_lambda, output_shape=(1, ), name='yolo_loss',
+        model_loss_xy = Lambda(model_grid_loss_xy_lambda, output_shape=(3, ), name='yolo_loss_xy',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
+            
+        model_loss_wh = Lambda(model_grid_loss_wh_lambda, output_shape=(3, ), name='yolo_loss_wh',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
+        model_loss_class = Lambda(model_grid_loss_wh_lambda, output_shape=(3, ), name='yolo_loss_class',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+            
+        model = Model([model_body.input, *y_true], [model_loss_xy, model_loss_wh, model_loss_class])
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
-    model = Model([model_body.input, *y_true], model_loss)
-
+            
+        model = Model([model_body.input, *y_true], model_loss)
     return model
 
+    
 def data_generator(annotation_lines, batch_size, input_shape, anchors, num_classes):
     '''data generator for fit_generator'''
     n = len(annotation_lines)
