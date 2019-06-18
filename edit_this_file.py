@@ -5,7 +5,7 @@ from train import get_classes, get_anchors
 from yolo3.utils import get_random_data, letterbox_image
 from yolo3.model import preprocess_true_boxes, yolo_loss, yolo_body
 import numpy as np
-from train import create_model
+from train import create_model, create_locloss_model
 from keras import backend as K
 from PIL import Image
 from keras.optimizers import Adam
@@ -43,13 +43,15 @@ y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batc
 
 # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
-K.clear_session()
+model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
-image_input = Input(shape=(None, None, 3))
+# K.clear_session()
 
-model = yolo_body(image_input, num_anchors//3, num_classes)
+# image_input = Input(shape=(None, None, 3))
 
-model.load_weights(model_path, by_name=True, skip_mismatch=True)
+# model = yolo_body(image_input, num_anchors//3, num_classes)
+
+# model.load_weights(model_path, by_name=True, skip_mismatch=True)
 
 
 # model.compile(optimizer=Adam(lr=1e-3), loss={'yolo_loss': lambda y_true, y_pred: y_pred})
@@ -70,7 +72,7 @@ image_data = np.expand_dims(image_data, 0)
 
 # i = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
 
-i = sess.run(model.output, feed_dict={model.input: image_data}) 
+i = sess.run(model.output, feed_dict={model.input: image_data})
 
 
 print(i)
