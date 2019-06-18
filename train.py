@@ -127,7 +127,7 @@ def model_grid_loss_lambda(*args, **kwargs):
     # tf_print(wh_loss_grid, [tf.shape(wh_loss_grid)], "wh_loss_grid.shape: ")
     # tf_print(class_loss_grid, [tf.shape(class_loss_grid)], "class_loss_grid.shape: ")
     # print('xy_loss_grid:', dict_loss['xy_loss_grid'], 'wh_loss_grid:', dict_loss['wh_loss_grid']) 
-    return dict_loss['loss'] 
+    return np.array([[dict_loss['xy_loss_grid'], dict_loss['wh_loss_grid'], dict_loss['class_loss_grid']]]) 
 
 def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
             weights_path='model_data/yolo_weights.h5', grid_loss=False):
@@ -154,7 +154,7 @@ def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze
             for i in range(num): model_body.layers[i].trainable = False
             print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
     if grid_loss:
-        model_loss = Lambda(model_grid_loss_lambda, output_shape=(3,), name='yolo_loss',
+        model_loss = Lambda(model_grid_loss_lambda, output_shape=(1, ), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
     else:
