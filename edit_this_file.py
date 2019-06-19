@@ -27,14 +27,14 @@ num_train = len(annotation_lines) - num_val
 input_shape = (416,416)
 
 n = len(annotation_lines)
-image, box = get_random_data(annotation_lines[0], input_shape, random=False)
+image, box = get_random_data(annotation_lines[-1], input_shape, random=False)
 
 image_data = []
 box_data = []
 batch_data = []
 image_data.append(image)
 box_data.append(box)
-batch_data.append(annotation_lines[0])
+batch_data.append(annotation_lines[-1])
 
 image_data = np.array(image_data)
 box_data = np.array(box_data)
