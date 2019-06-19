@@ -41,9 +41,9 @@ box_data = np.array(box_data)
 
 y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
 
-model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
+# model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
-# model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
+model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 
 # K.clear_session()
 

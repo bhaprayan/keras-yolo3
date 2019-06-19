@@ -465,13 +465,13 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     # return loss
     return dict(
         loss=loss,
-        xy_loss_grid_0=xy_loss_grid[0],
-        xy_loss_grid_1=xy_loss_grid[1],
-        xy_loss_grid_2=xy_loss_grid[2],
-        wh_loss_grid_0=wh_loss_grid[0],
-        wh_loss_grid_1=wh_loss_grid[1],
-        wh_loss_grid_2=wh_loss_grid[2],
-        class_loss_grid_0=class_loss_grid[0],
-        class_loss_grid_1=class_loss_grid[1],
-        class_loss_grid_2=class_loss_grid[2],
+        xy_loss_grid_0=xy_grid_loss_list[0],
+        xy_loss_grid_1=xy_grid_loss_list[1],
+        xy_loss_grid_2=xy_grid_loss_list[2],
+        wh_loss_grid_0=wh_grid_loss_list[0],
+        wh_loss_grid_1=wh_grid_loss_list[1],
+        wh_loss_grid_2=wh_grid_loss_list[2],
+        class_loss_grid_0=class_grid_loss_list[0],
+        class_loss_grid_1=class_grid_loss_list[1],
+        class_loss_grid_2=class_grid_loss_list[2],
         )
