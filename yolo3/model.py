@@ -396,6 +396,10 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     m = K.shape(yolo_outputs[0])[0] # batch size, tensor
     mf = K.cast(m, K.dtype(yolo_outputs[0]))
 
+    xy_grid_loss_list = []
+    wh_grid_loss_list = []
+    class_grid_loss_list = []
+
     for l in range(num_layers):
         object_mask = y_true[l][..., 4:5]
         true_class_probs = y_true[l][..., 5:]
@@ -429,6 +433,10 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
         confidence_loss_grid = object_mask * K.binary_crossentropy(object_mask, raw_pred[...,4:5], from_logits=True)+ \
             (1-object_mask) * K.binary_crossentropy(object_mask, raw_pred[...,4:5], from_logits=True) * ignore_mask
         class_loss_grid = object_mask * K.binary_crossentropy(true_class_probs, raw_pred[...,5:], from_logits=True)
+
+        xy_grid_loss_list.append(xy_loss_grid)
+        wh_grid_loss_list.append(wh_loss_grid)
+        class_grid_loss_list.append(class_loss_grid)
         
         # ipdb.set_trace()
 
@@ -457,7 +465,13 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
     # return loss
     return dict(
         loss=loss,
-        xy_loss_grid=xy_loss_grid,
-        wh_loss_grid=wh_loss_grid,
-        class_loss_grid=class_loss_grid,
+        xy_loss_grid_0=xy_loss_grid[0],
+        xy_loss_grid_1=xy_loss_grid[1],
+        xy_loss_grid_2=xy_loss_grid[2],
+        wh_loss_grid_0=wh_loss_grid[0],
+        wh_loss_grid_1=wh_loss_grid[1],
+        wh_loss_grid_2=wh_loss_grid[2],
+        class_loss_grid_0=class_loss_grid[0],
+        class_loss_grid_1=class_loss_grid[1],
+        class_loss_grid_2=class_loss_grid[2],
         )
