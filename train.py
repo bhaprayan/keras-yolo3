@@ -286,8 +286,8 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
             
-        model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_xy_1, model_loss_xy_2,
-         model_loss_wh_0, model_loss_wh_1, model_loss_wh_2, model_loss_class_0, model_loss_class_1, model_loss_class_2])
+        model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_wh_0, model_loss_class_0,
+        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2])
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
