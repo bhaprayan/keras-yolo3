@@ -19,25 +19,31 @@ anchors = get_anchors(anchors_path)
 num_anchors = len(anchors)
 
 annotation_path = 'train_nuro.txt'
+uuid_path = 'uuid_nuro.txt'
 val_split = 0.99
 with open(annotation_path) as f:
     annotation_lines = f.readlines()
+with open(uuid_path) as f:
+    uuid_lines = f.readlines()
 num_val = int(len(annotation_lines)*val_split)
 num_train = len(annotation_lines) - num_val
 input_shape = (416,416)
 
 n = len(annotation_lines)
 image, box = get_random_data(annotation_lines[-1], input_shape, random=False)
-
+uuid = uuid_lines[-1]
 image_data = []
 box_data = []
 batch_data = []
+uuid_data = []
 image_data.append(image)
 box_data.append(box)
 batch_data.append(annotation_lines[-1])
+uuid_data.append(uuid)
 
 image_data = np.array(image_data)
 box_data = np.array(box_data)
+uuid_data = np.array(uuid_data)
 
 y_true, obj_idx = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
 
