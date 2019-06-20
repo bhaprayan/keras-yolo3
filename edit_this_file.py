@@ -39,7 +39,7 @@ batch_data.append(annotation_lines[-1])
 image_data = np.array(image_data)
 box_data = np.array(box_data)
 
-y_true = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
+y_true, obj_idx = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
 
 # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 

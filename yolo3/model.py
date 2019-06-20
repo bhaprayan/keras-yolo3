@@ -265,6 +265,8 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
     y_true = [np.zeros((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l]),5+num_classes),
         dtype='float32') for l in range(num_layers)]
 
+    obj_idx = [np.full((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l])), -1, dtype='int32') for l in range(num_layers)]
+
     # Expand dim to apply broadcasting.
     anchors = np.expand_dims(anchors, 0)
     anchor_maxes = anchors / 2.
@@ -301,8 +303,10 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
                     y_true[l][b, j, i, k, 0:4] = true_boxes[b,t, 0:4]
                     y_true[l][b, j, i, k, 4] = 1
                     y_true[l][b, j, i, k, 5+c] = 1
+                    obj_idx[l][b, j, i, k] = t
     # y_true.append(batch_data)
-    return y_true
+    # TODO: 
+    return y_true, obj_idx
 
 
 def box_iou(b1, b2):
