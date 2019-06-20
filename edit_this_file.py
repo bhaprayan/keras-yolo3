@@ -30,15 +30,15 @@ num_train = len(annotation_lines) - num_val
 input_shape = (416,416)
 
 n = len(annotation_lines)
-image, box = get_random_data(annotation_lines[-1], input_shape, random=False)
-uuid = uuid_lines[-1]
+image, box = get_random_data(annotation_lines[-200], input_shape, random=False)
+uuid = uuid_lines[-200]
 image_data = []
 box_data = []
 batch_data = []
 uuid_data = []
 image_data.append(image)
 box_data.append(box)
-batch_data.append(annotation_lines[-1])
+batch_data.append(annotation_lines[-200])
 uuid_data.append(uuid)
 
 image_data = np.array(image_data)

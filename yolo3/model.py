@@ -295,6 +295,8 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
         # Find best anchor for each true box
         best_anchor = np.argmax(iou, axis=-1)
 
+        ipdb.set_trace()
+
         for t, n in enumerate(best_anchor):
             for l in range(num_layers):
                 if n in anchor_mask[l]:
