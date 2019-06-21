@@ -248,14 +248,14 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
     y_true: list of array, shape like yolo_outputs, xywh are reletive value
 
     '''
-    print('Batch data: ', batch_data)
-    print('UUID data: ', uuid_data, 'len:', len(uuid_data))
+    # print('Batch data: ', batch_data)
+    # print('UUID data: ', uuid_data, 'len:', len(uuid_data))
     assert (true_boxes[..., 4]<num_classes).all(), 'class id must be less than num_classes'
     num_layers = len(anchors)//3 # default setting
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]
 
     true_boxes = np.array(true_boxes, dtype='float32')
-    print('true_boxes.shape:', true_boxes.shape)
+    # print('true_boxes.shape:', true_boxes.shape)
     input_shape = np.array(input_shape, dtype='int32')
     boxes_xy = (true_boxes[..., 0:2] + true_boxes[..., 2:4]) // 2
     boxes_wh = true_boxes[..., 2:4] - true_boxes[..., 0:2]
@@ -300,7 +300,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
         # Find best anchor for each true box
         best_anchor = np.argmax(iou, axis=-1)
 
-        print('best_anchor.shape', best_anchor.shape)
+        # print('best_anchor.shape', best_anchor.shape)
 
         for t, n in enumerate(best_anchor):
             for l in range(num_layers):
@@ -313,7 +313,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
                     y_true[l][b, j, i, k, 4] = 1
                     y_true[l][b, j, i, k, 5+c] = 1
                     # obj_idx[l][b, j, i, k] = t
-                    print(t)
+                    # print(t)
                     obj_uuid[l][b, j, i, k] = uuid_data[t]
                     # ipdb.set_trace()
     # y_true.append(batch_data)
@@ -383,7 +383,7 @@ def tf_save_tensor(op, tensors, tensor_type=None, UUID=None):
         op = tf.identity(op)
     return op
 
-def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
+def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
     '''Return yolo_loss tensor
 
     Parameters
@@ -400,7 +400,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=True):
 
     '''
     num_layers = len(anchors)//3 # default setting
-    print('Args length:', args)
+    # print('Args length:', args)
     yolo_outputs = args[:num_layers]
     y_true = args[num_layers:]
     # batch_details = args[-1]
