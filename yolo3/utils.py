@@ -1,3 +1,4 @@
+
 """Miscellaneous utility functions."""
 
 from functools import reduce
@@ -64,7 +65,7 @@ def get_random_data(annotation_line, input_shape, random=True, max_boxes=1000, j
             box[:, [0,2]] = box[:, [0,2]]*scale + dx
             box[:, [1,3]] = box[:, [1,3]]*scale + dy
             box_data[:len(box)] = box
-
+            
         return image_data, box_data
 
     # resize image
@@ -115,7 +116,9 @@ def get_random_data(annotation_line, input_shape, random=True, max_boxes=1000, j
         box[:, 3][box[:, 3]>h] = h
         box_w = box[:, 2] - box[:, 0]
         box_h = box[:, 3] - box[:, 1]
+        print('Shape of box:', box.shape)
         box = box[np.logical_and(box_w>1, box_h>1)] # discard invalid box
+        print('Mask:', np.logical_and(box_w>1, box_h>1))
         if len(box)>max_boxes: box = box[:max_boxes]
         box_data[:len(box)] = box
 

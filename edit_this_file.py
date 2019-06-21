@@ -17,6 +17,10 @@ class_names = get_classes(classes_path)
 num_classes = len(class_names)
 anchors = get_anchors(anchors_path)
 num_anchors = len(anchors)
+input_shape = (416,416)
+
+model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
+sess = K.get_session()
 
 annotation_path = 'train_nuro.txt'
 uuid_path = 'uuid_nuro.txt'
@@ -27,29 +31,31 @@ with open(uuid_path) as f:
     uuid_lines = f.readlines()
 num_val = int(len(annotation_lines)*val_split)
 num_train = len(annotation_lines) - num_val
-input_shape = (416,416)
 
 n = len(annotation_lines)
-image, box = get_random_data(annotation_lines[-200], input_shape, random=False)
-uuid = uuid_lines[-200]
-image_data = []
-box_data = []
-batch_data = []
-uuid_data = []
-image_data.append(image)
-box_data.append(box)
-batch_data.append(annotation_lines[-200])
-uuid_data.append(uuid)
 
-image_data = np.array(image_data)
-box_data = np.array(box_data)
-uuid_data = np.array(uuid_data)
+for i in range(-240,-190,1):
+    image, box = get_random_data(annotation_lines[i], input_shape, random=False)
+    image_data = []
+    box_data = []
+    batch_data = []
+    image_data.append(image)
+    box_data.append(box)
+    batch_data.append(annotation_lines[i])
+    uuid_data = uuid_lines[i].split()
 
-y_true, obj_idx = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data)
+    image_data = np.array(image_data)
+    box_data = np.array(box_data)
+    uuid_data = np.array(uuid_data)
+
+    y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
+    
+    out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
+
+    print(obj_uuid[0].flatten())
 
 # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
-model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 
 # K.clear_session()
 
@@ -62,7 +68,6 @@ model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, w
 
 # model.compile(optimizer=Adam(lr=1e-3), loss={'yolo_loss': lambda y_true, y_pred: y_pred})
 
-sess = K.get_session()
 # model_image_size = (416,416)
 
 # img = "data/5cc3a5ef4e436f43f7b5615f/images/0.jpeg"
@@ -75,8 +80,6 @@ sess = K.get_session()
 
 # retrieve_layers = [-4,-3,-2]
 # i, j, k = sess.run([model.layers[i].output for i in retrieve_layers], feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
-
-# i = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
 
 # i = sess.run(*model.output, feed_dict={model.input: image_data})
 

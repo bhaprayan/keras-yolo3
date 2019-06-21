@@ -232,7 +232,7 @@ def yolo_eval(yolo_outputs,
     return boxes_, scores_, classes_
 
 
-def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_data):
+def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_data, uuid_data):
     '''Preprocess true boxes to training input format
 
     Parameters
@@ -249,11 +249,13 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
 
     '''
     print('Batch data: ', batch_data)
+    print('UUID data: ', uuid_data, 'len:', len(uuid_data))
     assert (true_boxes[..., 4]<num_classes).all(), 'class id must be less than num_classes'
     num_layers = len(anchors)//3 # default setting
     anchor_mask = [[6,7,8], [3,4,5], [0,1,2]] if num_layers==3 else [[3,4,5], [1,2,3]]
 
     true_boxes = np.array(true_boxes, dtype='float32')
+    print('true_boxes.shape:', true_boxes.shape)
     input_shape = np.array(input_shape, dtype='int32')
     boxes_xy = (true_boxes[..., 0:2] + true_boxes[..., 2:4]) // 2
     boxes_wh = true_boxes[..., 2:4] - true_boxes[..., 0:2]
@@ -265,9 +267,11 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
     y_true = [np.zeros((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l]),5+num_classes),
         dtype='float32') for l in range(num_layers)]
 
-    obj_idx = [np.full((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l])), -1, dtype='int32') for l in range(num_layers)]
+    # obj_idx = [np.full((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l])), -1, dtype='int32') for l in range(num_layers)]
 
-    # obj_uuid = [np.empty((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l])), dtype='<U8') for l in range(num_layers)]
+    # NOTE: set dtype to length of largest string. shouldn't have to worry about this for us since we're using standardized uuids.
+
+    obj_uuid = [np.empty((m,grid_shapes[l][0],grid_shapes[l][1],len(anchor_mask[l])), dtype='<U36') for l in range(num_layers)]
 
     # Expand dim to apply broadcasting.
     anchors = np.expand_dims(anchors, 0)
@@ -278,6 +282,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
     for b in range(m):
         # Discard zero rows.
         wh = boxes_wh[b, valid_mask[b]]
+        uuid_data = uuid_data[valid_mask[b,:uuid_data.shape[0]]]
         if len(wh)==0: continue
         # Expand dim to apply broadcasting.
         wh = np.expand_dims(wh, -2)
@@ -295,7 +300,7 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
         # Find best anchor for each true box
         best_anchor = np.argmax(iou, axis=-1)
 
-        ipdb.set_trace()
+        print('best_anchor.shape', best_anchor.shape)
 
         for t, n in enumerate(best_anchor):
             for l in range(num_layers):
@@ -307,12 +312,13 @@ def preprocess_true_boxes(true_boxes, input_shape, anchors, num_classes, batch_d
                     y_true[l][b, j, i, k, 0:4] = true_boxes[b,t, 0:4]
                     y_true[l][b, j, i, k, 4] = 1
                     y_true[l][b, j, i, k, 5+c] = 1
-                    obj_idx[l][b, j, i, k] = t
+                    # obj_idx[l][b, j, i, k] = t
                     print(t)
-                    # obj_uuid[l][b, j, i, k] = 
+                    obj_uuid[l][b, j, i, k] = uuid_data[t]
+                    # ipdb.set_trace()
     # y_true.append(batch_data)
     # TODO: 
-    return y_true, obj_idx
+    return y_true, obj_uuid
 
 
 def box_iou(b1, b2):
