@@ -249,7 +249,11 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
             for i in range(num): model_body.layers[i].trainable = False
             print('Freeze the first {} layers of total {} layers.'.format(num, len(model_body.layers)))
 
-    if grid_loss:
+    if grid_loss: 
+        model_loss_total = Lambda(model_grid_loss_lambda, output_shape=(1, ), name='yolo_loss',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
         model_loss_xy_0 = Lambda(model_grid_loss_xy_0_lambda, output_shape=(3, ), name='yolo_loss_xy_0',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
@@ -287,7 +291,7 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
             [*model_body.output, *y_true])
             
         model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_wh_0, model_loss_class_0,
-        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2])
+        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2, model_loss_total])
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
