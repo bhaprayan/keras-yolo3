@@ -10,6 +10,7 @@ from keras import backend as K
 from PIL import Image
 from keras.optimizers import Adam
 import ipdb
+import time
 
 model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
 classes_path = 'model_data/classes.txt'
@@ -38,7 +39,8 @@ n = len(annotation_lines)
 loss_path = 'loss_nuro.txt'
 loss_file = open(loss_path, 'w')
 
-for i in range(100):
+start = time.time()
+for i in range(n):
     image, box = get_random_data(annotation_lines[i], input_shape, random=False)
     # extract image location
     image_data = []
@@ -53,16 +55,22 @@ for i in range(100):
     box_data = np.array(box_data)
     uuid_data = np.array(uuid_data)
 
-    y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
+    try:
+        y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
 
-    out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
+        out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
 
-    # print(obj_uuid[0].flatten())
-    loss_file.write(' '.join((annotation_lines[i].split()[0], str(out[-1]),'\n')))
-
+        # print(obj_uuid[0].flatten())
+        loss_file.write(' '.join((annotation_lines[i].split()[0], str(out[-1]),'\n')))
+        if(i % 100 == 0):
+            print(i)
+    except:
+        continue
+end = time.time()
+print('Total time:', end-start)
+loss_file.close()
 sess.close()
 # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
-
 
 # K.clear_session()
 
