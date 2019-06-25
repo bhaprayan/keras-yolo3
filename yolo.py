@@ -237,11 +237,12 @@ class YOLO(object):
         true_boxes = true_boxes[:,:4]
         
         for i, c in reversed(list(enumerate(true_classes))):
-            predicted_class = self.dataset_class_names[c]
+            # predicted_class = self.class_names[c]
             box = true_boxes[i]
             score = 1.0
 
-            label = '{} {:.2f}'.format(predicted_class, score)
+            # label = '{} {:.2f}'.format(predicted_class, score)
+            label = 'True Box'
             draw = ImageDraw.Draw(image)
             label_size = draw.textsize(label, font)
 
