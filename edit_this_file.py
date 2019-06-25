@@ -90,9 +90,16 @@ print('Total time:', end-start)
 
 model = YOLO() 
 i = 0
-for img in high_loss_idx:
+for i in range(n):
+    img = high_loss_idx[i]
     image = Image.open(img)
-    img_arr = model.detect_image(image)
+    idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
+    annotation_line = annotation_lines[idx] # extract line text
+    box = np.array([np.array(list(map(int,box.split(',')))) for box in annotation_line.split()[1:]]) 
+    box = box[:,:4]
+    box[:,[0,1]] = box[:,[1,0]]
+    box[:,[2,3]] = box[:,[3,2]]
+    img_arr = model.detect_image_bboxes(image, box)
     img_arr.save(str(i) + '_detect.jpeg')
     i += 1
 # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)

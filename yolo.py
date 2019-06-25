@@ -24,6 +24,7 @@ class YOLO(object):
         "model_path": 'model_data/yolo_weights.h5',
         "anchors_path": 'model_data/yolo_anchors.txt',
         "classes_path": 'model_data/coco_classes.txt',
+        "nuro_classes_path": 'model_data/classes.txt',
         "score" : 0.3,
         "iou" : 0.5,
         "model_image_size" : (416, 416),
@@ -40,13 +41,14 @@ class YOLO(object):
     def __init__(self, **kwargs):
         self.__dict__.update(self._defaults) # set up default values
         self.__dict__.update(kwargs) # and update with user overrides
-        self.class_names = self._get_class()
+        self.class_names = self._get_class(self.classes_path)
+        self.dataset_class_names = self._get_class(self.nuro_classes_path)
         self.anchors = self._get_anchors()
         self.sess = K.get_session()
         self.boxes, self.scores, self.classes = self.generate()
 
-    def _get_class(self):
-        classes_path = os.path.expanduser(self.classes_path)
+    def _get_class(self, classes_path):
+        classes_path = os.path.expanduser(classes_path)
         with open(classes_path) as f:
             class_names = f.readlines()
         class_names = [c.strip() for c in class_names]
@@ -160,6 +162,109 @@ class YOLO(object):
             draw.rectangle(
                 [tuple(text_origin), tuple(text_origin + label_size)],
                 fill=self.colors[c])
+            draw.text(text_origin, label, fill=(0, 0, 0), font=font)
+            del draw
+
+        end = timer()
+        print(end - start)
+        return image
+
+    def detect_image_bboxes(self, image, true_boxes):
+        # modified function to also plot ground truth bboxes along /w predictions
+        start = timer()
+
+        if self.model_image_size != (None, None):
+            assert self.model_image_size[0]%32 == 0, 'Multiples of 32 required'
+            assert self.model_image_size[1]%32 == 0, 'Multiples of 32 required'
+            boxed_image = letterbox_image(image, tuple(reversed(self.model_image_size)))
+        else:
+            new_image_size = (image.width - (image.width % 32),
+                              image.height - (image.height % 32))
+            boxed_image = letterbox_image(image, new_image_size)
+        image_data = np.array(boxed_image, dtype='float32')
+
+        print(image_data.shape)
+        image_data /= 255.
+        image_data = np.expand_dims(image_data, 0)  # Add batch dimension.
+
+        out_boxes, out_scores, out_classes = self.sess.run(
+            [self.boxes, self.scores, self.classes],
+            feed_dict={
+                self.yolo_model.input: image_data,
+                self.input_image_shape: [image.size[1], image.size[0]],
+                K.learning_phase(): 0
+            })
+
+        print('Found {} boxes for {}'.format(len(out_boxes), 'img'))
+
+        font = ImageFont.truetype(font='font/FiraMono-Medium.otf',
+                    size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
+        thickness = (image.size[0] + image.size[1]) // 300
+
+        for i, c in reversed(list(enumerate(out_classes))):
+            predicted_class = self.class_names[c]
+            box = out_boxes[i]
+            score = out_scores[i]
+
+            label = '{} {:.2f}'.format(predicted_class, score)
+            draw = ImageDraw.Draw(image)
+            label_size = draw.textsize(label, font)
+
+            top, left, bottom, right = box
+            top = max(0, np.floor(top + 0.5).astype('int32'))
+            left = max(0, np.floor(left + 0.5).astype('int32'))
+            bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
+            right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
+            print(label, (left, top), (right, bottom))
+
+            if top - label_size[1] >= 0:
+                text_origin = np.array([left, top - label_size[1]])
+            else:
+                text_origin = np.array([left, top + 1])
+
+            # My kingdom for a good redistributable image drawing library.
+            for i in range(thickness):
+                draw.rectangle(
+                    [left + i, top + i, right - i, bottom - i],
+                    outline=self.colors[c])
+            draw.rectangle(
+                [tuple(text_origin), tuple(text_origin + label_size)],
+                fill=self.colors[c])
+            draw.text(text_origin, label, fill=(0, 0, 0), font=font)
+            del draw
+
+        true_classes = true_boxes[:,-1]
+        true_boxes = true_boxes[:,:4]
+        
+        for i, c in reversed(list(enumerate(true_classes))):
+            predicted_class = self.dataset_class_names[c]
+            box = true_boxes[i]
+            score = 1.0
+
+            label = '{} {:.2f}'.format(predicted_class, score)
+            draw = ImageDraw.Draw(image)
+            label_size = draw.textsize(label, font)
+
+            top, left, bottom, right = box
+            top = max(0, np.floor(top + 0.5).astype('int32'))
+            left = max(0, np.floor(left + 0.5).astype('int32'))
+            bottom = min(image.size[1], np.floor(bottom + 0.5).astype('int32'))
+            right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
+            print(label, (left, top), (right, bottom))
+
+            if top - label_size[1] >= 0:
+                text_origin = np.array([left, top - label_size[1]])
+            else:
+                text_origin = np.array([left, top + 1])
+
+            # My kingdom for a good redistributable image drawing library.
+            for i in range(thickness):
+                draw.rectangle(
+                    [left + i, top + i, right - i, bottom - i],
+                    outline=(255,255,255))
+            draw.rectangle(
+                [tuple(text_origin), tuple(text_origin + label_size)],
+                fill=(255,255,255))
             draw.text(text_origin, label, fill=(0, 0, 0), font=font)
             del draw
 
