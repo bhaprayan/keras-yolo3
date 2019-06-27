@@ -20,11 +20,11 @@ from keras.utils import multi_gpu_model
 
 class YOLO(object):
     _defaults = {
-        # "model_path": 'logs/000/ep009-loss30.814-val_loss30.951.h5',
-        "model_path": 'model_data/yolo_weights.h5',
+        "model_path": 'logs/000/ep009-loss30.814-val_loss30.951.h5',
+        # "model_path": 'model_data/yolo_weights.h5',
         "anchors_path": 'model_data/yolo_anchors.txt',
-        "classes_path": 'model_data/coco_classes.txt',
-        "nuro_classes_path": 'model_data/classes.txt',
+        # "classes_path": 'model_data/coco_classes.txt',
+        "classes_path": 'model_data/classes.txt',
         "score" : 0.3,
         "iou" : 0.5,
         "model_image_size" : (416, 416),
@@ -42,7 +42,7 @@ class YOLO(object):
         self.__dict__.update(self._defaults) # set up default values
         self.__dict__.update(kwargs) # and update with user overrides
         self.class_names = self._get_class(self.classes_path)
-        self.dataset_class_names = self._get_class(self.nuro_classes_path)
+        # self.dataset_class_names = self._get_class(self.nuro_classes_path)
         self.anchors = self._get_anchors()
         self.sess = K.get_session()
         self.boxes, self.scores, self.classes = self.generate()
@@ -237,12 +237,15 @@ class YOLO(object):
         true_boxes = true_boxes[:,:4]
         
         for i, c in reversed(list(enumerate(true_classes))):
-            # predicted_class = self.class_names[c]
+            try:
+                predicted_class = self.class_names[c]
+            except:
+                print('Exception! class:', c)
             box = true_boxes[i]
             score = 1.0
 
             # label = '{} {:.2f}'.format(predicted_class, score)
-            label = 'True Box'
+            label = 'Box'
             draw = ImageDraw.Draw(image)
             label_size = draw.textsize(label, font)
 
