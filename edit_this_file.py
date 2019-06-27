@@ -11,7 +11,7 @@ from PIL import Image
 from keras.optimizers import Adam
 import ipdb
 import time
-from filter_loss import filter_high_loss
+from filter_loss import filter_high_loss, filter_low_loss
 from yolo import YOLO
 import matplotlib.pyplot as plt
 
@@ -47,6 +47,8 @@ for i, line in enumerate(annotation_lines):
 # high_loss_line = 213569
 
 high_loss_idx = filter_high_loss(10)
+# ipdb.set_trace()
+# high_loss_idx = filter_low_loss(10)
 # extract only top 100 entries for now
 n = len(high_loss_idx)
 start = time.time()
@@ -93,16 +95,17 @@ i = 0
 for i in range(n):
     img = high_loss_idx[i]
     image = Image.open(img)
-    idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
-    annotation_line = annotation_lines[idx] # extract line text
+    # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
+    # annotation_line = annotation_lines[idx] # extract line text
+    annotation_line = open('updated_train_nuro.txt', 'r').read()
+    print(img, annotation_line)
     box = np.array([np.array(list(map(int,box.split(',')))) for box in annotation_line.split()[1:]]) 
-    box = box[:,:4]
     box[:,[0,1]] = box[:,[1,0]]
     box[:,[2,3]] = box[:,[3,2]]
     img_arr = model.detect_image_bboxes(image, box)
     img_arr.save(str(i) + '_detect.jpeg')
-    i += 1
-# model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
+    # img_arr = model.detect_image(image)
+    # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
 # K.clear_session()
 
