@@ -14,6 +14,7 @@ import time
 from filter_loss import filter_high_loss, filter_low_loss
 from yolo import YOLO
 import matplotlib.pyplot as plt
+import json
 
 model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
 classes_path = 'model_data/classes.txt'
@@ -71,13 +72,25 @@ for i in range(n):
 
     try:
         y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
+
+        tensor_map = {}
+
+        for i in range(len(obj_uuid)):
+            # TODO: retrieve uuid scale mapping
+            flat_tensor = obj_uuid[i].flatten()
+            flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
+            tensor_map[str(i)+'_uuid'] = flat_tensor
         
-        out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])}) 
+        out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
 
-        print('i:', i)
+        for i in range(len(out)-1):
+            # TODO: retrieve dict name mapping
+            flat_tensor = out[i].flatten()
+            flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
+            tensor_map[str(i)+'_grid'] = flat_tensor
 
-        for j in out:
-            print('j:', np.sum(j))
+        with open(str(idx) + '_' + 'data.json', 'w') as fp:
+            json.dump(tensor_map, fp, indent=4)
 
         # print(obj_uuid[0].flatten())
         # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
