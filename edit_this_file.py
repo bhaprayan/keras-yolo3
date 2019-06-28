@@ -101,6 +101,7 @@ for i in range(n):
         tensor_map['task'] = task
         with open(str(idx) + '_' + 'data.json', 'w') as fp:
             json.dump(tensor_map, fp, indent=4, sort_keys=True)
+        print(img_name)
     except:
         continue
 
@@ -121,19 +122,21 @@ print('Total time:', end-start)
 # loss_file.close()
 # sess.close()
 
-model = YOLO() 
-i = 0
-for i in range(n):
-    img = high_loss_idx[i]
-    image = Image.open(img)
-    idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
-    annotation_line = annotation_lines[idx] # extract line text
-    print(img, annotation_line)
-    box = np.array([np.array(list(map(int,box.split(',')))) for box in annotation_line.split()[1:]]) 
-    box[:,[0,1]] = box[:,[1,0]]
-    box[:,[2,3]] = box[:,[3,2]]
-    img_arr = model.detect_image_bboxes(image, box)
-    img_arr.save(str(i) + '_detect.jpeg')
+# model = YOLO() 
+# i = 0
+# for i in range(n):
+#     img = high_loss_idx[i]
+#     image = Image.open(img)
+#     idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
+#     annotation_line = annotation_lines[idx] # extract line text
+#     print(img, annotation_line)
+#     box = np.array([np.array(list(map(int,box.split(',')))) for box in annotation_line.split()[1:]]) 
+#     box[:,[0,1]] = box[:,[1,0]]
+#     box[:,[2,3]] = box[:,[3,2]]
+#     img_arr = model.detect_image_bboxes(image, box)
+#     img_arr.save(str(i) + '_detect.jpeg')
+
+
     # img_arr = model.detect_image(image)
     # model = create_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=False)
 
