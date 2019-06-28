@@ -48,7 +48,7 @@ for i, line in enumerate(annotation_lines):
 # n = len(high_loss_idx)
 n = len(annotation_lines)
 start = time.time()
-for i in range(2):
+for i in range(10):
     # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
     annotation_line = annotation_lines[i] # extract line text
     image, box = get_random_data(annotation_line, input_shape, random=False)
@@ -83,19 +83,20 @@ for i in range(2):
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
         tensor_map[str(grid_n)+'_grid'] = flat_tensor.tolist()
 
-    print('Tensor map:', tensor_map)
-    
-    img_name = annotation_line.split()[0]
-    frame_no = img_name.split('/')[-1].split('.')[0]
-    subtask = img_name.split('/')[-3]
-    task = img_name.split('/')[-4]
-    tensor_map['image_name'] = img_name
-    tensor_map['frame_no'] = frame_no
-    tensor_map['subtask'] = subtask
-    tensor_map['task'] = task
-    with open(str(i) + '_' + 'data.json', 'w') as fp:
-        json.dump(tensor_map, fp, indent=4, sort_keys=True)
-    print(img_name)
+    try:
+        img_name = annotation_line.split()[0]
+        frame_no = img_name.split('/')[-1].split('.')[0]
+        subtask = img_name.split('/')[-3]
+        task = img_name.split('/')[-4]
+        tensor_map['image_name'] = img_name
+        tensor_map['frame_no'] = frame_no
+        tensor_map['subtask'] = subtask
+        tensor_map['task'] = task
+        with open(str(i) + '_' + 'data.json', 'w') as fp:
+            json.dump(tensor_map, fp, indent=4, sort_keys=True)
+        print(img_name)
+    except:
+        continue
 
 end = time.time()
 print('Total time:', end-start)
