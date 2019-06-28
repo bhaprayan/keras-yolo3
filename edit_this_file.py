@@ -47,14 +47,14 @@ for i, line in enumerate(annotation_lines):
 # loss_file = open(loss_path, 'w')
 # high_loss_line = 213569
 
-high_loss_idx = filter_high_loss(10)
+# high_loss_idx = filter_high_loss(10)
 # high_loss_idx = filter_low_loss(10)
 # extract only top 100 entries for now
-n = len(high_loss_idx)
+# n = len(high_loss_idx)
 start = time.time()
 for i in range(n):
-    idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
-    annotation_line = annotation_lines[idx] # extract line text
+    # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
+    annotation_line = annotation_lines[i] # extract line text
     image, box = get_random_data(annotation_line, input_shape, random=False)
     # extract image location
     image_data = []
@@ -63,7 +63,7 @@ for i in range(n):
     image_data.append(image)
     box_data.append(box)
     batch_data.append(annotation_line)
-    uuid_data = uuid_lines[idx].split()
+    uuid_data = uuid_lines[i].split()
 
     image_data = np.array(image_data)
     box_data = np.array(box_data)
@@ -73,32 +73,40 @@ for i in range(n):
     y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
 
     tensor_map = {}
-    ipdb.set_trace()
 
-    for i in range(len(obj_uuid)):
+    for j in range(len(obj_uuid)):
         # TODO: retrieve uuid scale mapping
-        flat_tensor = obj_uuid[i].flatten()
+        flat_tensor = obj_uuid[j].flatten()
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-        tensor_map[str(i)+'_uuid'] = flat_tensor.tolist()
+        tensor_map[str(j)+'_uuid'] = flat_tensor.tolist()
     
-    out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
+    out = sess.run(model.output, feed_dict={k:d for k, d in zip(model.input, [image_data, *y_true])})
 
-    for i in range(len(out)-1):
+    for grid_n in range(len(out)-1):
         # TODO: retrieve dict name mapping
-        flat_tensor = out[i].flatten()
+        flat_tensor = out[grid_n].flatten()
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-        tensor_map[str(i)+'_grid'] = flat_tensor.tolist()
+        tensor_map[str(grid_n)+'_grid'] = flat_tensor.tolist()
 
-    print('Tensor map:', tensor_map)
+    # print('Tensor map:', tensor_map)
 
     try:
         img_name = annotation_line.split()[0]
         frame_no = img_name.split('/')[-1].split('.')[0]
         subtask = img_name.split('/')[-3]
         task = img_name.split('/')[-4]
+        tensor_map['image_name'] = img_name
+        tensor_map['frame_no'] = frame_no
+        tensor_map['subtask'] = subtask
+        tensor_map['task'] = task
         with open(str(idx) + '_' + 'data.json', 'w') as fp:
             json.dump(tensor_map, fp, indent=4, sort_keys=True)
     except:
+        continue
+
+    if(i==2):
+        break
+    else:
         continue
 
     # print(obj_uuid[0].flatten())
@@ -118,9 +126,8 @@ i = 0
 for i in range(n):
     img = high_loss_idx[i]
     image = Image.open(img)
-    # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
-    # annotation_line = annotation_lines[idx] # extract line text
-    annotation_line = open('updated_train_nuro.txt', 'r').read()
+    idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
+    annotation_line = annotation_lines[idx] # extract line text
     print(img, annotation_line)
     box = np.array([np.array(list(map(int,box.split(',')))) for box in annotation_line.split()[1:]]) 
     box[:,[0,1]] = box[:,[1,0]]
