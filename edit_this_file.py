@@ -85,7 +85,6 @@ for i in range(2):
 
     print('Tensor map:', tensor_map)
     
-    print(img_name)
     img_name = annotation_line.split()[0]
     frame_no = img_name.split('/')[-1].split('.')[0]
     subtask = img_name.split('/')[-3]
@@ -94,8 +93,9 @@ for i in range(2):
     tensor_map['frame_no'] = frame_no
     tensor_map['subtask'] = subtask
     tensor_map['task'] = task
-    with open(str(idx) + '_' + 'data.json', 'w') as fp:
+    with open(str(i) + '_' + 'data.json', 'w') as fp:
         json.dump(tensor_map, fp, indent=4, sort_keys=True)
+    print(img_name)
 
 end = time.time()
 print('Total time:', end-start)
