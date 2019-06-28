@@ -70,39 +70,39 @@ for i in range(n):
     box_data = np.array(box_data)
     uuid_data = np.array(uuid_data)
 
-    try:
-        y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
+    # try:
+    y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
 
-        tensor_map = {}
+    tensor_map = {}
 
-        for i in range(len(obj_uuid)):
-            # TODO: retrieve uuid scale mapping
-            flat_tensor = obj_uuid[i].flatten()
-            flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-            tensor_map[str(i)+'_uuid'] = flat_tensor
-        
-        out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
+    for i in range(len(obj_uuid)):
+        # TODO: retrieve uuid scale mapping
+        flat_tensor = obj_uuid[i].flatten()
+        flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
+        tensor_map[str(i)+'_uuid'] = flat_tensor
+    
+    out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
 
-        ipdb.set_trace()
+    ipdb.set_trace()
 
-        for i in range(len(out)-1):
-            # TODO: retrieve dict name mapping
-            flat_tensor = out[i].flatten()
-            flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-            tensor_map[str(i)+'_grid'] = flat_tensor
+    for i in range(len(out)-1):
+        # TODO: retrieve dict name mapping
+        flat_tensor = out[i].flatten()
+        flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
+        tensor_map[str(i)+'_grid'] = flat_tensor
 
-        print('Tensor map:', tensor_map)
+    print('Tensor map:', tensor_map)
 
-        with open(str(idx) + '_' + 'data.json', 'w') as fp:
-            json.dump(tensor_map, fp, indent=4)
+    with open(str(idx) + '_' + 'data.json', 'w') as fp:
+        json.dump(tensor_map, fp, indent=4)
 
-        # print(obj_uuid[0].flatten())
-        # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
-        # if(i % 100 == 0):
-            # print(i)
-    except Exception as e:
-        print(e)
-        continue
+    # print(obj_uuid[0].flatten())
+    # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
+    # if(i % 100 == 0):
+        # print(i)
+    # except Exception as e:
+    #     print(e)
+    #     continue
 end = time.time()
 print('Total time:', end-start)
 # loss_file.close()
