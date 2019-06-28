@@ -91,8 +91,15 @@ for i in range(n):
 
     print('Tensor map:', tensor_map)
 
-    with open(str(idx) + '_' + 'data.json', 'w') as fp:
-        json.dump(tensor_map, fp, sort_keys=True, indent=4)
+    try:
+        img_name = annotation_line.split()[0]
+        frame_no = img_name.split('/')[-1].split('.')[0]
+        subtask = img_name.split('/')[-3]
+        task = img_name.split('/')[-4]
+        with open(str(idx) + '_' + 'data.json', 'w') as fp:
+            json.dump(tensor_map, fp, indent=4, sort_keys=True)
+    except:
+        continue
 
     # print(obj_uuid[0].flatten())
     # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
