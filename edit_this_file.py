@@ -28,8 +28,8 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'train_nuro.txt'
-uuid_path = 'uuid_nuro.txt'
+annotation_path = 'updated_train_nuro.txt'
+uuid_path = 'updated_uuid_nuro.txt'
 val_split = 0.99
 with open(annotation_path) as f:
     annotation_lines = f.readlines()
@@ -47,7 +47,7 @@ for i, line in enumerate(annotation_lines):
 # loss_file = open(loss_path, 'w')
 # high_loss_line = 213569
 
-high_loss_idx = filter_high_loss(10)
+high_loss_idx = filter_high_loss(1)
 # ipdb.set_trace()
 # high_loss_idx = filter_low_loss(10)
 # extract only top 100 entries for now
@@ -83,11 +83,15 @@ for i in range(n):
         
         out = sess.run(model.output, feed_dict={i:d for i, d in zip(model.input, [image_data, *y_true])})
 
+        ipdb.set_trace()
+
         for i in range(len(out)-1):
             # TODO: retrieve dict name mapping
             flat_tensor = out[i].flatten()
             flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
             tensor_map[str(i)+'_grid'] = flat_tensor
+
+        print('Tensor map:', tensor_map)
 
         with open(str(idx) + '_' + 'data.json', 'w') as fp:
             json.dump(tensor_map, fp, indent=4)
@@ -96,7 +100,8 @@ for i in range(n):
         # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
         # if(i % 100 == 0):
             # print(i)
-    except:
+    except Exception as e:
+        print(e)
         continue
 end = time.time()
 print('Total time:', end-start)
