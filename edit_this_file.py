@@ -38,21 +38,17 @@ with open(uuid_path) as f:
 num_val = int(len(annotation_lines)*val_split)
 num_train = len(annotation_lines) - num_val
 
-n = len(annotation_lines)
-
 annotate_dict = {}
 for i, line in enumerate(annotation_lines):
     annotate_dict[line.split()[0]] = i
-# loss_path = 'loss_nuro.txt'
-# loss_file = open(loss_path, 'w')
-# high_loss_line = 213569
 
 # high_loss_idx = filter_high_loss(10)
 # high_loss_idx = filter_low_loss(10)
 # extract only top 100 entries for now
 # n = len(high_loss_idx)
+n = len(annotation_lines)
 start = time.time()
-for i in range(n):
+for i in range(2):
     # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
     annotation_line = annotation_lines[i] # extract line text
     image, box = get_random_data(annotation_line, input_shape, random=False)
@@ -69,7 +65,6 @@ for i in range(n):
     box_data = np.array(box_data)
     uuid_data = np.array(uuid_data)
 
-    # try:
     y_true, obj_uuid = preprocess_true_boxes(box_data, input_shape, anchors, num_classes, batch_data, uuid_data)
 
     tensor_map = {}
@@ -88,9 +83,10 @@ for i in range(n):
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
         tensor_map[str(grid_n)+'_grid'] = flat_tensor.tolist()
 
-    # print('Tensor map:', tensor_map)
+    print('Tensor map:', tensor_map)
 
     try:
+        print(img_name)
         img_name = annotation_line.split()[0]
         frame_no = img_name.split('/')[-1].split('.')[0]
         subtask = img_name.split('/')[-3]
@@ -101,26 +97,11 @@ for i in range(n):
         tensor_map['task'] = task
         with open(str(idx) + '_' + 'data.json', 'w') as fp:
             json.dump(tensor_map, fp, indent=4, sort_keys=True)
-        print(img_name)
     except:
         continue
 
-    if(i==2):
-        break
-    else:
-        continue
-
-    # print(obj_uuid[0].flatten())
-    # loss_file.write(' '.join((annotation_lines[high_loss_line].split()[0], str(out[-1]),'\n')))
-    # if(i % 100 == 0):
-        # print(i)
-    # except Exception as e:
-    #     print(e)
-    #     continue
 end = time.time()
 print('Total time:', end-start)
-# loss_file.close()
-# sess.close()
 
 # model = YOLO() 
 # i = 0
