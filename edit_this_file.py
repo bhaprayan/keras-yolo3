@@ -16,8 +16,10 @@ from yolo import YOLO
 import matplotlib.pyplot as plt
 import json
 
-model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
-classes_path = 'model_data/classes.txt'
+# model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
+model_path = 'model_data/yolo.h5'
+# classes_path = 'model_data/classes.txt'
+classes_path = 'model_data/coco_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 class_names = get_classes(classes_path)
 num_classes = len(class_names)
@@ -28,8 +30,8 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'updated_train_nuro.txt'
-uuid_path = 'updated_uuid_nuro.txt'
+annotation_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_train.txt'
+uuid_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_uuid.txt'
 val_split = 0.99
 with open(annotation_path) as f:
     annotation_lines = f.readlines()
@@ -48,7 +50,18 @@ for i, line in enumerate(annotation_lines):
 # n = len(high_loss_idx)
 n = len(annotation_lines)
 start = time.time()
-for i in range(10):
+
+grid_mapping_full = ['0_xy_model_loss', '0_wh_model_loss', '0_class_model_loss', 
+        '1_xy_model_loss', '1_wh_model_loss', '1_class_model_loss', 
+        '2_xy_model_loss', '2_wh_model_loss', '2_class_model_loss', 
+        'model_loss_total', 'model_output_0', 'model_output_1', 'model_output_2']
+
+grid_mapping = ['0_xy_model_loss', '0_wh_model_loss', '0_class_model_loss', 
+        '1_xy_model_loss', '1_wh_model_loss', '1_class_model_loss', 
+        '2_xy_model_loss', '2_wh_model_loss', '2_class_model_loss', 
+        'model_loss_total']
+
+for i in range(n):
     # idx = annotate_dict[high_loss_idx[i]] # extract line number of high loss image from dict
     annotation_line = annotation_lines[i] # extract line text
     image, box = get_random_data(annotation_line, input_shape, random=False)
@@ -59,7 +72,9 @@ for i in range(10):
     image_data.append(image)
     box_data.append(box)
     batch_data.append(annotation_line)
-    uuid_data = uuid_lines[i].split()
+    # first element of uuid_data list is the image path
+    uuid_data = uuid_lines[i].split()[1:]
+    print(uuid_data)
 
     image_data = np.array(image_data)
     box_data = np.array(box_data)
@@ -77,12 +92,15 @@ for i in range(10):
     
     out = sess.run(model.output, feed_dict={k:d for k, d in zip(model.input, [image_data, *y_true])})
 
-    for grid_n in range(len(out)-1):
-        # TODO: retrieve dict name mapping
+    ipdb.set_trace()
+
+    for grid_n in range(len(grid_mapping)):
+        # TODO: retrieve dict name mapping 
         flat_tensor = out[grid_n].flatten()
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-        tensor_map[str(grid_n)+'_grid'] = flat_tensor.tolist()
-
+        tensor_map[grid_mapping[grid_n]] = flat_tensor.tolist()
+        
+    obj_mask_idx = ['model_obj_mask_0', 'model_obj_mask_1', 'model_obj_mask_2']
     try:
         img_name = annotation_line.split()[0]
         frame_no = img_name.split('/')[-1].split('.')[0]
@@ -92,9 +110,13 @@ for i in range(10):
         tensor_map['frame_no'] = frame_no
         tensor_map['subtask'] = subtask
         tensor_map['task'] = task
-        with open(str(i) + '_' + 'data.json', 'w') as fp:
+        for idx in range(1,len(obj_mask_idx)+1):
+            # hack. obj masks located at the end of out tensor. hence iterating backward.
+            tensor_map[obj_mask_idx[-idx]] = np.transpose(np.nonzero(out[-idx])).tolist()
+        with open(str(i).zfill(5) + '_' + 'yolo_data.json', 'w') as fp:
             json.dump(tensor_map, fp, indent=4, sort_keys=True)
-        print(img_name)
+        if(i % 100 == 0):
+            print('image:', i)
     except:
         continue
 
