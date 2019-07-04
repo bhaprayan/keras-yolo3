@@ -415,6 +415,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
     xy_grid_loss_list = []
     wh_grid_loss_list = []
     class_grid_loss_list = []
+    object_mask_list = []
 
     for l in range(num_layers):
         object_mask = y_true[l][..., 4:5]
@@ -453,6 +454,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         xy_grid_loss_list.append(xy_loss_grid)
         wh_grid_loss_list.append(wh_loss_grid)
         class_grid_loss_list.append(class_loss_grid)
+        object_mask_list.append(object_mask)
         
         # ipdb.set_trace()
 
@@ -490,4 +492,10 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         class_loss_grid_0=class_grid_loss_list[0],
         class_loss_grid_1=class_grid_loss_list[1],
         class_loss_grid_2=class_grid_loss_list[2],
+        yolo_output_0 = yolo_outputs[0],
+        yolo_output_1 = yolo_outputs[1],
+        yolo_output_2 = yolo_outputs[2],
+        object_mask_0 = object_mask_list[0],
+        object_mask_1 = object_mask_list[1],
+        object_mask_2 = object_mask_list[2],
         )
