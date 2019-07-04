@@ -155,6 +155,29 @@ def model_grid_loss_class_2_lambda(*args, **kwargs):
     dict_loss = yolo_loss(*args, **kwargs) 
     return dict_loss['class_loss_grid_2']
 
+def model_output_0_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['yolo_output_0']
+
+def model_output_1_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['yolo_output_1']
+
+def model_output_2_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['yolo_output_2']
+
+def model_object_mask_0_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['object_mask_0']
+
+def model_object_mask_1_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['object_mask_1']
+
+def model_object_mask_2_lambda(*args, **kwargs):
+    dict_loss = yolo_loss(*args, **kwargs) 
+    return dict_loss['object_mask_2']
 
 def create_model(input_shape, anchors, num_classes, load_pretrained=True, freeze_body=2,
             weights_path='model_data/yolo_weights.h5', grid_loss=False):
@@ -289,9 +312,33 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
         model_loss_class_2 = Lambda(model_grid_loss_class_2_lambda, output_shape=(3, ), name='yolo_loss_class_2',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
+
+        model_output_0 = Lambda(model_output_0_lambda, output_shape=(3, ), name='yolo_output_0',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
+        model_output_1 = Lambda(model_output_1_lambda, output_shape=(3, ), name='yolo_output_1',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
+        model_output_2 = Lambda(model_output_2_lambda, output_shape=(3, ), name='yolo_output_2',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
+        model_object_mask_0 = Lambda(model_object_mask_0_lambda, output_shape=(3, ), name='yolo_obj_mask_0',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+        
+        model_object_mask_1 = Lambda(model_object_mask_1_lambda, output_shape=(3, ), name='yolo_obj_mask_1',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
             
+        model_object_mask_2 = Lambda(model_object_mask_2_lambda, output_shape=(3, ), name='yolo_obj_mask_2',
+            arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
+            [*model_body.output, *y_true])
+
         model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_wh_0, model_loss_class_0,
-        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2, model_loss_total])
+        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2, model_loss_total, model_output_0, model_output_1, model_output_2, model_object_mask_0, model_object_mask_1, model_object_mask_2])
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
