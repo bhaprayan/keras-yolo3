@@ -361,10 +361,10 @@ def create_locloss_model(input_shape, anchors, num_classes, load_pretrained=True
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
             [*model_body.output, *y_true])
 
-        model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_wh_0, model_loss_class_0,
-        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_xy_2, model_loss_wh_2, model_loss_class_2, 
-        model_loss_confidence_0, model_loss_confidence_1, model_loss_confidence_2, model_loss_total, model_output_0, 
-        model_output_1, model_output_2, model_object_mask_0, model_object_mask_1, model_object_mask_2])
+        model = Model([model_body.input, *y_true], [model_loss_xy_0, model_loss_wh_0, model_loss_class_0, model_loss_confidence_0, 
+        model_loss_xy_1, model_loss_wh_1, model_loss_class_1, model_loss_confidence_1, 
+        model_loss_xy_2, model_loss_wh_2, model_loss_class_2, model_loss_confidence_2,
+        model_loss_total, model_output_0, model_output_1, model_output_2, model_object_mask_0, model_object_mask_1, model_object_mask_2])
     else:
         model_loss = Lambda(model_loss_lambda, output_shape=(1,), name='yolo_loss',
             arguments={'anchors': anchors, 'num_classes': num_classes, 'ignore_thresh': 0.5})(
