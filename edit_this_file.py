@@ -31,8 +31,8 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_train.txt'
-uuid_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_uuid.txt' 
+annotation_path = 'bad_label_train_nuro.txt'
+uuid_path = 'bad_label_uuid_nuro.txt' 
 
 val_split = 0.99
 with open(annotation_path) as f:

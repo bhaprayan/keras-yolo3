@@ -4,12 +4,12 @@ import pandas as pd
 import ipdb
 import csv
 
-fs = glob.glob('*yolo_data.json')
+fs = glob.glob('bad_labels/*yolo_data.json')
 uuid_scales = ['0_uuid','1_uuid','2_uuid']
 xy_loss_scales = ['0_xy_model_loss','1_xy_model_loss','2_xy_model_loss']
 wh_loss_scales = ['0_wh_model_loss','1_wh_model_loss','2_wh_model_loss']
 confidence_scales = ['0_confidence_model_loss','1_confidence_model_loss','2_confidence_model_loss']
-csv_file = csv.writer(open('subtask_losses.csv','w'))
+csv_file = csv.writer(open('bad_subtask_losses.csv','w'))
 csv_file.writerow(['uuid','frame_no','subtask','x_loss','y_loss','w_loss','h_loss', 'confidence'])
 
 for fn in fs:
@@ -34,7 +34,7 @@ for fn in fs:
     for row in fn_loss:
         csv_file.writerow(row)
 
-dat = pd.read_csv('subtask_losses.csv')
+dat = pd.read_csv('bad_subtask_losses.csv')
 dat['xy_loss'] = dat['x_loss'] + dat['y_loss']
 dat['wh_loss'] = dat['w_loss'] + dat['h_loss']
 dat = dat.set_index('uuid')
