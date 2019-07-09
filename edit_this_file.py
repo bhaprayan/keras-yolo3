@@ -94,11 +94,11 @@ for i in range(n):
     
     out = sess.run(model.output, feed_dict={k:d for k, d in zip(model.input, [image_data, *y_true])})
 
-    for grid_n in range(len(grid_mapping)):
+    for grid_n in range(len(grid_mapping_full)):
         # TODO: retrieve dict name mapping 
         flat_tensor = out[grid_n].flatten()
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-        tensor_map[grid_mapping[grid_n]] = flat_tensor.tolist()
+        tensor_map[grid_mapping_full[grid_n]] = flat_tensor.tolist()
         
     obj_mask_idx = ['model_obj_mask_0', 'model_obj_mask_1', 'model_obj_mask_2']
     try:

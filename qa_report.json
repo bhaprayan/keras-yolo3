@@ -1,0 +1,5589 @@
+{
+  "nuro_labels": [
+    {
+      "frames": [
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 40, 
+                "top": 700, 
+                "width": 113
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 907, 
+                "top": 680, 
+                "width": 24
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 967, 
+                "top": 678, 
+                "width": 42
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 674, 
+                "top": 681, 
+                "width": 27
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26510947, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 11, 
+                "left": 946, 
+                "top": 669, 
+                "width": 19
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1032, 
+              "scale_id": "2cbeb76f-570e-4250-8914-9c961984946a"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 904, 
+                "top": 669, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 961, 
+                "top": 666, 
+                "width": 42
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 22, 
+                "left": 641, 
+                "top": 673, 
+                "width": 31
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26515947, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 950, 
+                "top": 653, 
+                "width": 14
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1032, 
+              "scale_id": "2cbeb76f-570e-4250-8914-9c961984946a"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 1075, 
+                "top": 654, 
+                "width": 4
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1068, 
+                "top": 647, 
+                "width": 12
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 906, 
+                "top": 655, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 31.97916987646488, 
+                "left": 961.9966125488281, 
+                "top": 652.986141204834, 
+                "width": 38.99305918920902
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 20.937501938232458, 
+                "left": 624.9826965332031, 
+                "top": 658.9583702087402, 
+                "width": 14.965278656372107
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26520946, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 8, 
+                "left": 959, 
+                "top": 669, 
+                "width": 14
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1032, 
+              "scale_id": "2cbeb76f-570e-4250-8914-9c961984946a"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1086, 
+                "top": 666, 
+                "width": 7
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1078, 
+                "top": 658, 
+                "width": 15
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 912, 
+                "top": 666, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 30.989584000000036, 
+                "left": 966.9966125488281, 
+                "top": 665.000057220459, 
+                "width": 35.95486262548832
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 21.961807281860388, 
+                "left": 576.9965515136719, 
+                "top": 672.9514122009277, 
+                "width": 24.947917969116247
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26525946, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 1096, 
+                "top": 668, 
+                "width": 8
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1087, 
+                "top": 661, 
+                "width": 18
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 917, 
+                "top": 669, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 30.000001938232458, 
+                "left": 967.9861145019531, 
+                "top": 666.9791831970215, 
+                "width": 38.97569850195316
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 534, 
+                "top": 675, 
+                "width": 41
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26530945, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 1102, 
+                "top": 682, 
+                "width": 9
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 40, 
+                "left": 1091, 
+                "top": 672, 
+                "width": 22
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 916, 
+                "top": 679, 
+                "width": 22
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 27.986112625488317, 
+                "left": 968.9930725097656, 
+                "top": 677.986141204834, 
+                "width": 35.00000193823246
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 473, 
+                "top": 685, 
+                "width": 52
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1563, 
+                "top": 673, 
+                "width": 48
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26535945, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 1100, 
+                "top": 648, 
+                "width": 11
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 42, 
+                "left": 1091, 
+                "top": 638, 
+                "width": 21
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 910, 
+                "top": 648, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 962, 
+                "top": 647, 
+                "width": 37
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 39, 
+                "left": 387, 
+                "top": 656, 
+                "width": 71
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1604, 
+                "top": 640, 
+                "width": 64
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26540945, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1107, 
+                "top": 652, 
+                "width": 12
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1097, 
+                "top": 639, 
+                "width": 25
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 910, 
+                "top": 651, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 962, 
+                "top": 649, 
+                "width": 35
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 48, 
+                "left": 286, 
+                "top": 664, 
+                "width": 79
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 60, 
+                "left": 1644, 
+                "top": 613, 
+                "width": 107
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26545945, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1119, 
+                "top": 661, 
+                "width": 13
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1111, 
+                "top": 649, 
+                "width": 26
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 917, 
+                "top": 660, 
+                "width": 20
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 968, 
+                "top": 659, 
+                "width": 34
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 157, 
+                "top": 673, 
+                "width": 82
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 69, 
+                "left": 1734, 
+                "top": 621, 
+                "width": 90
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26550944, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1134, 
+                "top": 676, 
+                "width": 13
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 1123, 
+                "top": 664, 
+                "width": 25
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 923, 
+                "top": 674, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 972, 
+                "top": 673, 
+                "width": 32
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 71, 
+                "left": 0, 
+                "top": 684, 
+                "width": 105
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 67, 
+                "left": 1853, 
+                "top": 630, 
+                "width": 67
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26555944, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 41, 
+                "left": 1148, 
+                "top": 687, 
+                "width": 14
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1134, 
+                "top": 676, 
+                "width": 30
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 927, 
+                "top": 686, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 974, 
+                "top": 686, 
+                "width": 32
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 277, 
+                "top": 693, 
+                "width": 45
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }
+          ], 
+          "frame_id": 26560944, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1159, 
+                "top": 690, 
+                "width": 15
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 129, 
+              "scale_id": "ad85f295-dde8-43ef-88dd-22f8fdbce4f8"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 1149, 
+                "top": 680, 
+                "width": 27
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 128, 
+              "scale_id": "6d2dcdd3-f127-402f-a332-97edd597883f"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 927, 
+                "top": 692, 
+                "width": 18
+              }, 
+              "label": "Cars", 
+              "nuro_id": 55, 
+              "scale_id": "73e4308c-5b21-44cb-937a-4b965e2ae325"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 974, 
+                "top": 691, 
+                "width": 30
+              }, 
+              "label": "Cars", 
+              "nuro_id": 72, 
+              "scale_id": "98cf9f5a-cba9-4ed3-ac3b-fdd867bef3d7"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 241, 
+                "top": 700, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }
+          ], 
+          "frame_id": 26565943, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 1, 
+      "sensor_id": "toh_camera_1"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 55, 
+                "left": 1559, 
+                "top": 658, 
+                "width": 361
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 13, 
+                "left": 1195, 
+                "top": 689, 
+                "width": 76
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 53.97569850195316, 
+                "left": 1707.9861145019531, 
+                "top": 681.9965782165527, 
+                "width": 107.98612025488274
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 36.97916987646488, 
+                "left": 1278.9930725097656, 
+                "top": 700.9896202087402, 
+                "width": 35.98958399999992
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }
+          ], 
+          "frame_id": 26510186, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 1495, 
+                "top": 662, 
+                "width": 308
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 20.000001938232458, 
+                "left": 1090.9896545410156, 
+                "top": 697.986141204834, 
+                "width": 102.98612025488274
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 63.92361262548832, 
+                "left": 1527.9862365722656, 
+                "top": 689.9826622009277, 
+                "width": 133.99306300390617
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }
+          ], 
+          "frame_id": 26515186, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1458, 
+                "top": 656, 
+                "width": 234
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 19.965278656372107, 
+                "left": 995.0000305175781, 
+                "top": 692.986141204834, 
+                "width": 100.98959162939445
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 75, 
+                "left": 1282, 
+                "top": 688, 
+                "width": 170
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1010, 
+                "top": 707, 
+                "width": 44
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 904, 
+                "top": 695, 
+                "width": 89
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }
+          ], 
+          "frame_id": 26520185, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 52, 
+                "left": 1409, 
+                "top": 669, 
+                "width": 144
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 22, 
+                "left": 899, 
+                "top": 703, 
+                "width": 108
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 91, 
+                "left": 920, 
+                "top": 712, 
+                "width": 232
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 52, 
+                "left": 856, 
+                "top": 717, 
+                "width": 64
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 802, 
+                "top": 705, 
+                "width": 94
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 43, 
+                "left": 1295, 
+                "top": 691, 
+                "width": 47
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }
+          ], 
+          "frame_id": 26525185, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 795, 
+                "top": 703, 
+                "width": 89
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 109, 
+                "left": 366, 
+                "top": 726, 
+                "width": 317
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 694, 
+                "top": 716, 
+                "width": 91
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 22, 
+                "left": 699, 
+                "top": 705, 
+                "width": 99
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 44, 
+                "left": 1200, 
+                "top": 692, 
+                "width": 82
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1483, 
+                "top": 672, 
+                "width": 55
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1040, 
+              "scale_id": "70ac7f38-d311-4d9b-becf-b0577299b505"
+            }
+          ], 
+          "frame_id": 26530185, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 50.9895878146973, 
+                "left": 1281.9271545410156, 
+                "top": 675.954891204834, 
+                "width": 71.96181300390617
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 48, 
+                "left": 1698, 
+                "top": 675, 
+                "width": 19
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1670, 
+                "top": 697, 
+                "width": 28
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 50, 
+                "left": 1669, 
+                "top": 674, 
+                "width": 49
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 669, 
+                "top": 704, 
+                "width": 116
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 64.94791987646488, 
+                "left": 486.9965515136719, 
+                "top": 717.986141204834, 
+                "width": 97.98612025488285
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 573, 
+                "top": 704, 
+                "width": 100
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 45, 
+                "left": 1114, 
+                "top": 696, 
+                "width": 79
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1426, 
+                "top": 676, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1040, 
+              "scale_id": "70ac7f38-d311-4d9b-becf-b0577299b505"
+            }, 
+            {
+              "bbox": {
+                "height": 12, 
+                "left": 469, 
+                "top": 719, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1041, 
+              "scale_id": "7503fa92-0477-47e5-aca8-f0053c8912b0"
+            }
+          ], 
+          "frame_id": 26535184, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 51, 
+                "left": 1605, 
+                "top": 657, 
+                "width": 18
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 1565, 
+                "top": 677, 
+                "width": 38
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1565, 
+                "top": 656, 
+                "width": 58
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 516, 
+                "top": 693, 
+                "width": 75
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 66, 
+                "left": 244, 
+                "top": 721, 
+                "width": 65
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 426, 
+                "top": 696, 
+                "width": 88
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 50, 
+                "left": 976, 
+                "top": 679, 
+                "width": 109
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1357, 
+                "top": 668, 
+                "width": 25
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1040, 
+              "scale_id": "70ac7f38-d311-4d9b-becf-b0577299b505"
+            }, 
+            {
+              "bbox": {
+                "height": 11, 
+                "left": 352, 
+                "top": 711, 
+                "width": 44
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1041, 
+              "scale_id": "7503fa92-0477-47e5-aca8-f0053c8912b0"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 239, 
+                "top": 714, 
+                "width": 46
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1042, 
+              "scale_id": "12072335-9c8d-49cc-b7b8-5eb81849c552"
+            }, 
+            {
+              "bbox": {
+                "height": 12, 
+                "left": 1440, 
+                "top": 668, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 25, 
+              "scale_id": "3831ad6d-a3fd-4a45-a65e-e059c9629c04"
+            }
+          ], 
+          "frame_id": 26540184, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1520, 
+                "top": 672, 
+                "width": 21
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1473, 
+                "top": 692, 
+                "width": 46
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 55, 
+                "left": 1472, 
+                "top": 671, 
+                "width": 69
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 66, 
+                "left": 381, 
+                "top": 720, 
+                "width": 145
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 63, 
+                "left": 24, 
+                "top": 758, 
+                "width": 64
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 301, 
+                "top": 720, 
+                "width": 104
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 51, 
+                "left": 882, 
+                "top": 702, 
+                "width": 112
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1296, 
+                "top": 686, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1040, 
+              "scale_id": "70ac7f38-d311-4d9b-becf-b0577299b505"
+            }, 
+            {
+              "bbox": {
+                "height": 12, 
+                "left": 240, 
+                "top": 740, 
+                "width": 54
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1041, 
+              "scale_id": "7503fa92-0477-47e5-aca8-f0053c8912b0"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 193, 
+                "top": 742, 
+                "width": 16
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1042, 
+              "scale_id": "12072335-9c8d-49cc-b7b8-5eb81849c552"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1362, 
+                "top": 685, 
+                "width": 51
+              }, 
+              "label": "Cars", 
+              "nuro_id": 25, 
+              "scale_id": "3831ad6d-a3fd-4a45-a65e-e059c9629c04"
+            }, 
+            {
+              "bbox": {
+                "height": 21, 
+                "left": 1606, 
+                "top": 671, 
+                "width": 32
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }
+          ], 
+          "frame_id": 26545184, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 44, 
+                "left": 659, 
+                "top": 694, 
+                "width": 128
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 51, 
+                "left": 1428, 
+                "top": 682, 
+                "width": 20
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1388, 
+                "top": 701, 
+                "width": 43
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1387, 
+                "top": 682, 
+                "width": 62
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 257, 
+                "top": 716, 
+                "width": 162
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 189, 
+                "top": 716, 
+                "width": 101
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 796, 
+                "top": 700, 
+                "width": 115
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 13.975695640930212, 
+                "left": 143.99307250976562, 
+                "top": 733.9930992126465, 
+                "width": 45.00000193823243
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1041, 
+              "scale_id": "7503fa92-0477-47e5-aca8-f0053c8912b0"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 65, 
+                "top": 734, 
+                "width": 76
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1042, 
+              "scale_id": "12072335-9c8d-49cc-b7b8-5eb81849c552"
+            }, 
+            {
+              "bbox": {
+                "height": 21, 
+                "left": 1306, 
+                "top": 687, 
+                "width": 55
+              }, 
+              "label": "Cars", 
+              "nuro_id": 25, 
+              "scale_id": "3831ad6d-a3fd-4a45-a65e-e059c9629c04"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1568, 
+                "top": 671, 
+                "width": 20
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }, 
+            {
+              "bbox": {
+                "height": 59.9826412509766, 
+                "left": 1823.9931945800781, 
+                "top": 650.9896202087402, 
+                "width": 95.00000575292961
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }
+          ], 
+          "frame_id": 26550183, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 46, 
+                "left": 591, 
+                "top": 695, 
+                "width": 140
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1037, 
+              "scale_id": "671cb79a-d9d6-43cb-9216-284a3af3d4b1"
+            }, 
+            {
+              "bbox": {
+                "height": 59, 
+                "left": 1333, 
+                "top": 689, 
+                "width": 22
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 38, 
+                "left": 1295, 
+                "top": 710, 
+                "width": 41
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 60, 
+                "left": 1295, 
+                "top": 689, 
+                "width": 62
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 127, 
+                "top": 720, 
+                "width": 143
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 72, 
+                "top": 720, 
+                "width": 79
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 698, 
+                "top": 707, 
+                "width": 119
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 51, 
+                "top": 736, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1041, 
+              "scale_id": "7503fa92-0477-47e5-aca8-f0053c8912b0"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 0, 
+                "top": 736, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1042, 
+              "scale_id": "12072335-9c8d-49cc-b7b8-5eb81849c552"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 1237, 
+                "top": 692, 
+                "width": 68
+              }, 
+              "label": "Cars", 
+              "nuro_id": 25, 
+              "scale_id": "3831ad6d-a3fd-4a45-a65e-e059c9629c04"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 1533, 
+                "top": 678, 
+                "width": 34
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }, 
+            {
+              "bbox": {
+                "height": 70.98958400000004, 
+                "left": 1645.9897766113281, 
+                "top": 663.9930992126465, 
+                "width": 130.0000057529296
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 52, 
+                "left": 494, 
+                "top": 730, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 113, 
+              "scale_id": "ef7f07e0-2522-493d-8fe9-dfba3fe22ca0"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 922, 
+                "top": 713, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 88, 
+              "scale_id": "b5c16a30-d629-4f58-a1a3-4abffdfdd310"
+            }
+          ], 
+          "frame_id": 26555183, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 55, 
+                "left": 1214, 
+                "top": 708, 
+                "width": 26
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 126, 
+              "scale_id": "36308c82-5cce-4d89-b1c2-a0d3ba3f23e9"
+            }, 
+            {
+              "bbox": {
+                "height": 37, 
+                "left": 1184, 
+                "top": 726, 
+                "width": 32
+              }, 
+              "label": "Stroller", 
+              "nuro_id": 124, 
+              "scale_id": "f980ec3f-857f-4c7f-bcb7-9a3e9b8615bb"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 1183, 
+                "top": 707, 
+                "width": 59
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 125, 
+              "scale_id": "0252a30b-f562-4d3b-b5f4-3e1d1451ab9a"
+            }, 
+            {
+              "bbox": {
+                "height": 76, 
+                "left": 0, 
+                "top": 725, 
+                "width": 111
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 592, 
+                "top": 719, 
+                "width": 116
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 1168, 
+                "top": 710, 
+                "width": 69
+              }, 
+              "label": "Cars", 
+              "nuro_id": 25, 
+              "scale_id": "3831ad6d-a3fd-4a45-a65e-e059c9629c04"
+            }, 
+            {
+              "bbox": {
+                "height": 87.98611262548832, 
+                "left": 1366.9966125488281, 
+                "top": 685.9896202087402, 
+                "width": 182.98612025488274
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 342, 
+                "top": 739, 
+                "width": 68
+              }, 
+              "label": "Cars", 
+              "nuro_id": 113, 
+              "scale_id": "ef7f07e0-2522-493d-8fe9-dfba3fe22ca0"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 953, 
+                "top": 722, 
+                "width": 27
+              }, 
+              "label": "Cars", 
+              "nuro_id": 64, 
+              "scale_id": "878439d6-bb28-4c0e-83e7-517cc83b4110"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1576, 
+                "top": 691, 
+                "width": 68
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }
+          ], 
+          "frame_id": 26560183, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 60, 
+                "left": 457, 
+                "top": 724, 
+                "width": 115
+              }, 
+              "label": "Cars", 
+              "nuro_id": 14, 
+              "scale_id": "1d69625b-2d28-4518-a768-5f02b3b45dd7"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1417, 
+                "top": 700, 
+                "width": 52
+              }, 
+              "label": "Cars", 
+              "nuro_id": 91, 
+              "scale_id": "c3ea6105-45db-4e63-8ec4-e156b29f2cfc"
+            }, 
+            {
+              "bbox": {
+                "height": 111, 
+                "left": 894, 
+                "top": 701, 
+                "width": 269
+              }, 
+              "label": "Cars", 
+              "nuro_id": 127, 
+              "scale_id": "4d0c283e-315c-448f-a250-0840ac9fc460"
+            }, 
+            {
+              "bbox": {
+                "height": 55, 
+                "left": 160, 
+                "top": 744, 
+                "width": 91
+              }, 
+              "label": "Cars", 
+              "nuro_id": 113, 
+              "scale_id": "ef7f07e0-2522-493d-8fe9-dfba3fe22ca0"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 860, 
+                "top": 727, 
+                "width": 30
+              }, 
+              "label": "Cars", 
+              "nuro_id": 64, 
+              "scale_id": "878439d6-bb28-4c0e-83e7-517cc83b4110"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1514, 
+                "top": 701, 
+                "width": 74
+              }, 
+              "label": "Cars", 
+              "nuro_id": 89, 
+              "scale_id": "baf2a547-3cf7-445c-9ab4-7b954ae3c004"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 124, 
+                "top": 742, 
+                "width": 39
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1050, 
+              "scale_id": "a4fc1357-8646-4ccd-894d-f2ae55bb849c"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 1891, 
+                "top": 691, 
+                "width": 29
+              }, 
+              "label": "Cars", 
+              "nuro_id": 30, 
+              "scale_id": "461e6e31-5b15-478b-b63a-217e7c5a6acd"
+            }
+          ], 
+          "frame_id": 26565182, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 4, 
+      "sensor_id": "toh_camera_2"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [], 
+          "frame_id": 26510186, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26515186, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26520185, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26525185, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26530185, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 119, 
+                "left": 1288, 
+                "top": 659, 
+                "width": 365
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }
+          ], 
+          "frame_id": 26535184, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 108, 
+                "left": 531, 
+                "top": 688, 
+                "width": 323
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }
+          ], 
+          "frame_id": 26540184, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 91, 
+                "left": 35, 
+                "top": 733, 
+                "width": 230
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 48, 
+                "left": 1708, 
+                "top": 698, 
+                "width": 46
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }
+          ], 
+          "frame_id": 26545184, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 1485, 
+                "top": 658, 
+                "width": 200
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1043, 
+              "scale_id": "c63f5d9d-7b16-464b-bfc5-205b6a6ed181"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1518, 
+                "top": 705, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 69, 
+              "scale_id": "960a6dbc-c4fd-4b76-b620-e1ca3c000f51"
+            }, 
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 1875, 
+                "top": 640, 
+                "width": 45
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 12, 
+                "left": 1522, 
+                "top": 668, 
+                "width": 62
+              }, 
+              "label": "Cars", 
+              "nuro_id": 10, 
+              "scale_id": "12c2583f-964f-4d44-ae22-3f00ea4fed2e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1828, 
+                "top": 655, 
+                "width": 47
+              }, 
+              "label": "Cars", 
+              "nuro_id": 40, 
+              "scale_id": "5c7bee30-acac-4d2a-9bf5-ccd3171d0808"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 1734, 
+                "top": 654, 
+                "width": 97
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1044, 
+              "scale_id": "d1dbd380-1199-4b0d-80d1-47de70d6d205"
+            }
+          ], 
+          "frame_id": 26550183, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1333, 
+                "top": 657, 
+                "width": 218
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1043, 
+              "scale_id": "c63f5d9d-7b16-464b-bfc5-205b6a6ed181"
+            }, 
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 1755, 
+                "top": 642, 
+                "width": 76
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1721, 
+                "top": 658, 
+                "width": 38
+              }, 
+              "label": "Cars", 
+              "nuro_id": 40, 
+              "scale_id": "5c7bee30-acac-4d2a-9bf5-ccd3171d0808"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1664, 
+                "top": 658, 
+                "width": 74
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1044, 
+              "scale_id": "d1dbd380-1199-4b0d-80d1-47de70d6d205"
+            }, 
+            {
+              "bbox": {
+                "height": 61, 
+                "left": 1814, 
+                "top": 641, 
+                "width": 106
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }
+          ], 
+          "frame_id": 26555183, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 85, 
+                "left": 1151, 
+                "top": 655, 
+                "width": 218
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1043, 
+              "scale_id": "c63f5d9d-7b16-464b-bfc5-205b6a6ed181"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1630, 
+                "top": 650, 
+                "width": 53
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1570, 
+                "top": 662, 
+                "width": 73
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1044, 
+              "scale_id": "d1dbd380-1199-4b0d-80d1-47de70d6d205"
+            }, 
+            {
+              "bbox": {
+                "height": 78, 
+                "left": 1670, 
+                "top": 648, 
+                "width": 123
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1371, 
+                "top": 667, 
+                "width": 58
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1045, 
+              "scale_id": "b15993bd-c3e7-4bf3-a80d-2e6de3fd82a2"
+            }
+          ], 
+          "frame_id": 26560183, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 82, 
+                "left": 955, 
+                "top": 661, 
+                "width": 261
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1043, 
+              "scale_id": "c63f5d9d-7b16-464b-bfc5-205b6a6ed181"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1479, 
+                "top": 654, 
+                "width": 39
+              }, 
+              "label": "Cars", 
+              "nuro_id": 71, 
+              "scale_id": "98b25503-f02b-4fc5-911c-c1b50438f0bc"
+            }, 
+            {
+              "bbox": {
+                "height": 67, 
+                "left": 1510, 
+                "top": 652, 
+                "width": 167
+              }, 
+              "label": "Cars", 
+              "nuro_id": 105, 
+              "scale_id": "e47bf913-c920-4788-930a-2885f9baf31e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1295, 
+                "top": 667, 
+                "width": 58
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1045, 
+              "scale_id": "b15993bd-c3e7-4bf3-a80d-2e6de3fd82a2"
+            }, 
+            {
+              "bbox": {
+                "height": 55, 
+                "left": 1844, 
+                "top": 665, 
+                "width": 76
+              }, 
+              "label": "Cars", 
+              "nuro_id": 92, 
+              "scale_id": "c984ec53-12c4-4a92-adab-79d5ea96c9a6"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 1233, 
+                "top": 676, 
+                "width": 40
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1049, 
+              "scale_id": "843485ef-e000-4e6a-b957-3126fe5eea0a"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 1825, 
+                "top": 677, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 113, 
+              "scale_id": "ef7f07e0-2522-493d-8fe9-dfba3fe22ca0"
+            }
+          ], 
+          "frame_id": 26565182, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 5, 
+      "sensor_id": "toh_camera_3"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 340, 
+                "top": 652, 
+                "width": 111
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 39, 
+                "left": 879, 
+                "top": 650, 
+                "width": 14
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 8, 
+              "scale_id": "0aed166c-7d62-4eac-a905-2dd37c5420dd"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 895, 
+                "top": 659, 
+                "width": 32
+              }, 
+              "label": "Cars", 
+              "nuro_id": 86, 
+              "scale_id": "b2160edf-23d8-4205-bf38-267a56db59e5"
+            }, 
+            {
+              "bbox": {
+                "height": 21, 
+                "left": 925, 
+                "top": 655, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1, 
+              "scale_id": "00e5e619-d93f-4495-9f89-ce79012c2ec0"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 629, 
+                "top": 656, 
+                "width": 48
+              }, 
+              "label": "Cars", 
+              "nuro_id": 12, 
+              "scale_id": "1c9c17ad-824c-4590-b954-e631cc12fa1e"
+            }, 
+            {
+              "bbox": {
+                "height": 70, 
+                "left": 1413, 
+                "top": 650, 
+                "width": 176
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 73, 
+                "top": 669, 
+                "width": 28
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1022, 
+              "scale_id": "91246138-61d7-460d-aafb-64cd14edbb80"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 344, 
+                "top": 664, 
+                "width": 9
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1010, 
+              "scale_id": "3a2b2474-d725-4a01-a77b-5bc69e347cc6"
+            }, 
+            {
+              "bbox": {
+                "height": 12, 
+                "left": 101, 
+                "top": 667, 
+                "width": 22
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1009, 
+              "scale_id": "917532b8-034e-4f4f-9755-c85e3bdc443e"
+            }, 
+            {
+              "bbox": {
+                "height": 42, 
+                "left": 927, 
+                "top": 659, 
+                "width": 47
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 35.989584000000036, 
+                "left": 155.00003051757812, 
+                "top": 660.000057220459, 
+                "width": 35.98958400000001
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 9, 
+                "left": 192, 
+                "top": 665, 
+                "width": 18
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1033, 
+              "scale_id": "5a665a75-3bf8-470c-bf9f-0627097079e8"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 569, 
+                "top": 665, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 17, 
+              "scale_id": "2af1a255-54fc-445b-ac05-d3c931cdc5e1"
+            }, 
+            {
+              "bbox": {
+                "height": 27.986112625488317, 
+                "left": 135.00003051757812, 
+                "top": 653.9930992126465, 
+                "width": 22.98611262548829
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26510947, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 40, 
+                "left": 280, 
+                "top": 662, 
+                "width": 145
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 83, 
+                "top": 677, 
+                "width": 41
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 857, 
+                "top": 680, 
+                "width": 22
+              }, 
+              "label": "Cars", 
+              "nuro_id": 86, 
+              "scale_id": "b2160edf-23d8-4205-bf38-267a56db59e5"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 884, 
+                "top": 675, 
+                "width": 30
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1, 
+              "scale_id": "00e5e619-d93f-4495-9f89-ce79012c2ec0"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 575, 
+                "top": 673, 
+                "width": 34
+              }, 
+              "label": "Cars", 
+              "nuro_id": 12, 
+              "scale_id": "1c9c17ad-824c-4590-b954-e631cc12fa1e"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 1108, 
+                "top": 674, 
+                "width": 127
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 8, 
+                "left": 48, 
+                "top": 681, 
+                "width": 8
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1022, 
+              "scale_id": "91246138-61d7-460d-aafb-64cd14edbb80"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 328, 
+                "top": 679, 
+                "width": 15
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1010, 
+              "scale_id": "3a2b2474-d725-4a01-a77b-5bc69e347cc6"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 790, 
+                "top": 679, 
+                "width": 81
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 37, 
+                "left": 152, 
+                "top": 674, 
+                "width": 38
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 522, 
+                "top": 679, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 17, 
+              "scale_id": "2af1a255-54fc-445b-ac05-d3c931cdc5e1"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 128, 
+                "top": 667, 
+                "width": 23
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26515947, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 271, 
+                "top": 675, 
+                "width": 75
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 84, 
+                "top": 691, 
+                "width": 42
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 852, 
+                "top": 689, 
+                "width": 28
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1, 
+              "scale_id": "00e5e619-d93f-4495-9f89-ce79012c2ec0"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 540, 
+                "top": 689, 
+                "width": 20
+              }, 
+              "label": "Cars", 
+              "nuro_id": 12, 
+              "scale_id": "1c9c17ad-824c-4590-b954-e631cc12fa1e"
+            }, 
+            {
+              "bbox": {
+                "height": 44.96528056372074, 
+                "left": 917.9861145019531, 
+                "top": 690.000057220459, 
+                "width": 93.99306300390629
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 325, 
+                "top": 693, 
+                "width": 15
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1010, 
+              "scale_id": "3a2b2474-d725-4a01-a77b-5bc69e347cc6"
+            }, 
+            {
+              "bbox": {
+                "height": 28.993057281860388, 
+                "left": 696.9966125488281, 
+                "top": 695.000057220459, 
+                "width": 60.9895878146973
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 37.98611262548832, 
+                "left": 155.98959350585938, 
+                "top": 687.986141204834, 
+                "width": 40.00000193823243
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 493, 
+                "top": 695, 
+                "width": 15
+              }, 
+              "label": "Cars", 
+              "nuro_id": 17, 
+              "scale_id": "2af1a255-54fc-445b-ac05-d3c931cdc5e1"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 128, 
+                "top": 681, 
+                "width": 23
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26520946, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 287, 
+                "top": 667, 
+                "width": 74
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 102, 
+                "top": 678, 
+                "width": 65
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 782, 
+                "top": 675, 
+                "width": 61
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 512, 
+                "top": 677, 
+                "width": 12
+              }, 
+              "label": "Cars", 
+              "nuro_id": 12, 
+              "scale_id": "1c9c17ad-824c-4590-b954-e631cc12fa1e"
+            }, 
+            {
+              "bbox": {
+                "height": 39, 
+                "left": 796, 
+                "top": 679, 
+                "width": 72
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 10, 
+                "left": 351, 
+                "top": 683, 
+                "width": 8
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1010, 
+              "scale_id": "3a2b2474-d725-4a01-a77b-5bc69e347cc6"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 667, 
+                "top": 683, 
+                "width": 16
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 38.99305918920902, 
+                "left": 165.00003051757812, 
+                "top": 675.9896202087402, 
+                "width": 40.00000193823243
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 451, 
+                "top": 681, 
+                "width": 26
+              }, 
+              "label": "Cars", 
+              "nuro_id": 17, 
+              "scale_id": "2af1a255-54fc-445b-ac05-d3c931cdc5e1"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 130, 
+                "top": 670, 
+                "width": 22
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26525946, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 304, 
+                "top": 667, 
+                "width": 113
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 92, 
+                "top": 677, 
+                "width": 88
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 762, 
+                "top": 677, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 86, 
+              "scale_id": "b2160edf-23d8-4205-bf38-267a56db59e5"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 786, 
+                "top": 674, 
+                "width": 25
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1, 
+              "scale_id": "00e5e619-d93f-4495-9f89-ce79012c2ec0"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 466, 
+                "top": 678, 
+                "width": 28
+              }, 
+              "label": "Cars", 
+              "nuro_id": 12, 
+              "scale_id": "1c9c17ad-824c-4590-b954-e631cc12fa1e"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 688, 
+                "top": 674, 
+                "width": 74
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 22, 
+                "left": 608, 
+                "top": 678, 
+                "width": 14
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 40.97222331274418, 
+                "left": 170.98959350585938, 
+                "top": 672.986141204834, 
+                "width": 43.99305918920899
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 130, 
+                "top": 666, 
+                "width": 23
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26530945, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 296, 
+                "top": 653, 
+                "width": 151
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 90, 
+                "top": 663, 
+                "width": 82
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 678, 
+                "top": 660, 
+                "width": 74
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 624, 
+                "top": 663, 
+                "width": 54
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 557, 
+                "top": 664, 
+                "width": 10
+              }, 
+              "label": "Cars", 
+              "nuro_id": 34, 
+              "scale_id": "4f86f68e-ff84-453b-affa-8a5a06167df4"
+            }, 
+            {
+              "bbox": {
+                "height": 43, 
+                "left": 172, 
+                "top": 660, 
+                "width": 46
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 125, 
+                "top": 655, 
+                "width": 23
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26535945, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 255, 
+                "top": 686, 
+                "width": 166
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 21, 
+                "left": 77, 
+                "top": 699, 
+                "width": 96
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 635, 
+                "top": 689, 
+                "width": 85
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 568, 
+                "top": 696, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 45, 
+                "left": 169, 
+                "top": 694, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 114, 
+                "top": 689, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26540945, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 251, 
+                "top": 685, 
+                "width": 171
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 74, 
+                "top": 694, 
+                "width": 101
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 636, 
+                "top": 688, 
+                "width": 79
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 519, 
+                "top": 697, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 173, 
+                "top": 692, 
+                "width": 51
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 135, 
+                "top": 697, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 87, 
+                "left": 1661, 
+                "top": 684, 
+                "width": 197
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 111, 
+                "top": 686, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26545945, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 241, 
+                "top": 671, 
+                "width": 184
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 70, 
+                "top": 684, 
+                "width": 107
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 608, 
+                "top": 671, 
+                "width": 80
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 495, 
+                "top": 683, 
+                "width": 29
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 184, 
+                "top": 678, 
+                "width": 56
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 142, 
+                "top": 685, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 72, 
+                "left": 1327, 
+                "top": 672, 
+                "width": 166
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 113, 
+                "top": 675, 
+                "width": 26
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26550944, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 254, 
+                "top": 656, 
+                "width": 193
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 85, 
+                "top": 669, 
+                "width": 98
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 580, 
+                "top": 656, 
+                "width": 94
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 469, 
+                "top": 669, 
+                "width": 27
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 57, 
+                "left": 193, 
+                "top": 663, 
+                "width": 60
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 148, 
+                "top": 671, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 1124, 
+                "top": 663, 
+                "width": 90
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 113, 
+                "top": 660, 
+                "width": 26
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26555944, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 274, 
+                "top": 645, 
+                "width": 196
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 91, 
+                "top": 650, 
+                "width": 118
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 592, 
+                "top": 650, 
+                "width": 75
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 454, 
+                "top": 657, 
+                "width": 16
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 61, 
+                "left": 203, 
+                "top": 649, 
+                "width": 64
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 151, 
+                "top": 656, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 48.99305918920902, 
+                "left": 970.9896545410156, 
+                "top": 651.9965782165527, 
+                "width": 97.98612025488274
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 113, 
+                "top": 646, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26560944, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 281, 
+                "top": 641, 
+                "width": 165
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1004, 
+              "scale_id": "71c63d68-975b-432f-ac3e-6d76534ba4e9"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 86, 
+                "top": 645, 
+                "width": 129
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1038, 
+              "scale_id": "72fe7982-b441-4151-8f76-707ee9cb87f5"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 574, 
+                "top": 648, 
+                "width": 70
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1039, 
+              "scale_id": "126e9756-6ef0-4545-a4ed-1c0a84ce555a"
+            }, 
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 434, 
+                "top": 654, 
+                "width": 12
+              }, 
+              "label": "Cars", 
+              "nuro_id": 61, 
+              "scale_id": "81cd857a-9cfd-4d4b-b3c5-5473cf98f834"
+            }, 
+            {
+              "bbox": {
+                "height": 64, 
+                "left": 207, 
+                "top": 645, 
+                "width": 72
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 150, 
+                "top": 654, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 40.9895878146973, 
+                "left": 846.9966125488281, 
+                "top": 650.9896202087402, 
+                "width": 78.99306300390629
+              }, 
+              "label": "Cars", 
+              "nuro_id": 107, 
+              "scale_id": "e5084690-9de2-4660-9b6e-ff2d69452a80"
+            }, 
+            {
+              "bbox": {
+                "height": 31, 
+                "left": 109, 
+                "top": 640, 
+                "width": 26
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }
+          ], 
+          "frame_id": 26565943, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 6, 
+      "sensor_id": "toh_camera_4"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 1602, 
+                "top": 618, 
+                "width": 74
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1777, 
+                "top": 616, 
+                "width": 112
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 189, 
+                "left": 1094, 
+                "top": 635, 
+                "width": 70
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 91, 
+                "left": 1253, 
+                "top": 662, 
+                "width": 62
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 206, 
+                "left": 1085, 
+                "top": 617, 
+                "width": 100
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 60, 
+                "left": 1055, 
+                "top": 622, 
+                "width": 156
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 74, 
+                "left": 1245, 
+                "top": 626, 
+                "width": 109
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 13, 
+                "left": 1747, 
+                "top": 618, 
+                "width": 32
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1034, 
+              "scale_id": "e72f5569-a977-4864-af1b-d610c0e69f9f"
+            }, 
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 951, 
+                "top": 627, 
+                "width": 24
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1035, 
+              "scale_id": "15999d44-3e78-47d0-a12c-6a55ce6ea40a"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 1030, 
+                "top": 623, 
+                "width": 38
+              }, 
+              "label": "Cars", 
+              "nuro_id": 110, 
+              "scale_id": "edcd7946-d3c2-42c9-b948-b918f5ee3ecb"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1830, 
+                "top": 613, 
+                "width": 37
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1808, 
+                "top": 606, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 82, 
+                "left": 1068, 
+                "top": 587, 
+                "width": 204
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26510947, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 1607, 
+                "top": 628, 
+                "width": 67
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1755, 
+                "top": 629, 
+                "width": 115
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 137, 
+                "left": 1276, 
+                "top": 640, 
+                "width": 51
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 75.98958400000004, 
+                "left": 1340.9896545410156, 
+                "top": 663.9930992126465, 
+                "width": 54.982641250976485
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 154, 
+                "left": 1275, 
+                "top": 625, 
+                "width": 74
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 50, 
+                "left": 1120, 
+                "top": 627, 
+                "width": 135
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 62.98611262548832, 
+                "left": 1317.9861145019531, 
+                "top": 632.986141204834, 
+                "width": 76.97916987646477
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1061, 
+                "top": 627, 
+                "width": 30
+              }, 
+              "label": "Cars", 
+              "nuro_id": 110, 
+              "scale_id": "edcd7946-d3c2-42c9-b948-b918f5ee3ecb"
+            }, 
+            {
+              "bbox": {
+                "height": 38, 
+                "left": 1826, 
+                "top": 626, 
+                "width": 39
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 13, 
+                "left": 1110, 
+                "top": 630, 
+                "width": 18
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1029, 
+              "scale_id": "4885c275-d9af-4897-be5f-923f8f777799"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 1801, 
+                "top": 618, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 68, 
+                "left": 1122, 
+                "top": 598, 
+                "width": 186
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26515947, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 14, 
+                "left": 1608, 
+                "top": 641, 
+                "width": 73
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1754, 
+                "top": 643, 
+                "width": 81
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 110, 
+                "left": 1385, 
+                "top": 654, 
+                "width": 40
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 65, 
+                "left": 1417, 
+                "top": 672, 
+                "width": 38
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 124, 
+                "left": 1382, 
+                "top": 640, 
+                "width": 56
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 1160, 
+                "top": 640, 
+                "width": 136
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 1351, 
+                "top": 649, 
+                "width": 79
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 1019, 
+                "top": 641, 
+                "width": 15
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1035, 
+              "scale_id": "15999d44-3e78-47d0-a12c-6a55ce6ea40a"
+            }, 
+            {
+              "bbox": {
+                "height": 38, 
+                "left": 1831, 
+                "top": 641, 
+                "width": 41
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 1802, 
+                "top": 633, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 62, 
+                "left": 1159, 
+                "top": 611, 
+                "width": 175
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26520946, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 13, 
+                "left": 1619, 
+                "top": 631, 
+                "width": 72
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1754, 
+                "top": 631, 
+                "width": 134
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 88, 
+                "left": 1457, 
+                "top": 641, 
+                "width": 31
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 1480, 
+                "top": 658, 
+                "width": 22
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 100, 
+                "left": 1454, 
+                "top": 629, 
+                "width": 49
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1260, 
+                "top": 628, 
+                "width": 71
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 1391, 
+                "top": 634, 
+                "width": 69
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 1121, 
+                "top": 630, 
+                "width": 36
+              }, 
+              "label": "Cars", 
+              "nuro_id": 110, 
+              "scale_id": "edcd7946-d3c2-42c9-b948-b918f5ee3ecb"
+            }, 
+            {
+              "bbox": {
+                "height": 40, 
+                "left": 1839, 
+                "top": 628, 
+                "width": 43
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1804, 
+                "top": 620, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 57, 
+                "left": 1260, 
+                "top": 603, 
+                "width": 104
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26525946, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1619, 
+                "top": 626, 
+                "width": 78
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1768, 
+                "top": 628, 
+                "width": 132
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 77, 
+                "left": 1509, 
+                "top": 638, 
+                "width": 27
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 51, 
+                "left": 1500, 
+                "top": 652, 
+                "width": 28
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 88, 
+                "left": 1507, 
+                "top": 627, 
+                "width": 40
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 1334, 
+                "top": 629, 
+                "width": 25
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1427, 
+                "top": 634, 
+                "width": 65
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 42, 
+                "left": 1846, 
+                "top": 626, 
+                "width": 44
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1183, 
+                "top": 633, 
+                "width": 33
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1029, 
+              "scale_id": "4885c275-d9af-4897-be5f-923f8f777799"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1804, 
+                "top": 619, 
+                "width": 26
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 57, 
+                "left": 1232, 
+                "top": 604, 
+                "width": 160
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26530945, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1624, 
+                "top": 616, 
+                "width": 75
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1018, 
+              "scale_id": "dc76c384-c57c-49f3-9ce6-137cbe9f4fd4"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 1764, 
+                "top": 616, 
+                "width": 86
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 65, 
+                "left": 1544, 
+                "top": 626, 
+                "width": 24
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 44, 
+                "left": 1528, 
+                "top": 640, 
+                "width": 20
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 77, 
+                "left": 1543, 
+                "top": 615, 
+                "width": 35
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 25, 
+                "left": 1276, 
+                "top": 633, 
+                "width": 28
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1452, 
+                "top": 622, 
+                "width": 61
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 44, 
+                "left": 1847, 
+                "top": 613, 
+                "width": 47
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 1799, 
+                "top": 606, 
+                "width": 25
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1258, 
+                "top": 595, 
+                "width": 153
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26535945, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1762, 
+                "top": 649, 
+                "width": 84
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 1565, 
+                "top": 658, 
+                "width": 21
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 42, 
+                "left": 1546, 
+                "top": 671, 
+                "width": 22
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 66, 
+                "left": 1564, 
+                "top": 650, 
+                "width": 29
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 1297, 
+                "top": 657, 
+                "width": 40
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 1471, 
+                "top": 654, 
+                "width": 53
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 46, 
+                "left": 1844, 
+                "top": 648, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 1788, 
+                "top": 640, 
+                "width": 26
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1279, 
+                "top": 627, 
+                "width": 56
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26540945, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 19, 
+                "left": 1757, 
+                "top": 647, 
+                "width": 87
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 56, 
+                "left": 1587, 
+                "top": 652, 
+                "width": 16
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 37.98611262548832, 
+                "left": 1565.9896545410156, 
+                "top": 663.9757041931152, 
+                "width": 22.986112625488204
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 63, 
+                "left": 1584, 
+                "top": 646, 
+                "width": 29
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1322, 
+                "top": 644, 
+                "width": 66
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 21, 
+                "left": 1495, 
+                "top": 648, 
+                "width": 41
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 1847, 
+                "top": 645, 
+                "width": 53
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1811, 
+                "top": 649, 
+                "width": 16
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 32, 
+                "left": 1784, 
+                "top": 637, 
+                "width": 28
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 41, 
+                "left": 1311, 
+                "top": 623, 
+                "width": 81
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26545945, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 15, 
+                "left": 1766, 
+                "top": 637, 
+                "width": 84
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 51, 
+                "left": 1608, 
+                "top": 643, 
+                "width": 17
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1586, 
+                "top": 654, 
+                "width": 23
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 59, 
+                "left": 1604, 
+                "top": 636, 
+                "width": 29
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 1350, 
+                "top": 636, 
+                "width": 72
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1519, 
+                "top": 639, 
+                "width": 36
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 53, 
+                "left": 1858, 
+                "top": 632, 
+                "width": 57
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1818, 
+                "top": 639, 
+                "width": 18
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1786, 
+                "top": 625, 
+                "width": 28
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1344, 
+                "top": 616, 
+                "width": 82
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26550944, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 16, 
+                "left": 1769, 
+                "top": 623, 
+                "width": 84
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 48, 
+                "left": 1624, 
+                "top": 629, 
+                "width": 16
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1602, 
+                "top": 640, 
+                "width": 22
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 1623, 
+                "top": 623, 
+                "width": 23
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 23.993057281860388, 
+                "left": 1378.9930725097656, 
+                "top": 622.986141204834, 
+                "width": 70.98958399999992
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1538, 
+                "top": 625, 
+                "width": 31
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 58, 
+                "left": 1865, 
+                "top": 618, 
+                "width": 55
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1823, 
+                "top": 624, 
+                "width": 19
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 34, 
+                "left": 1787, 
+                "top": 612, 
+                "width": 29
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 33, 
+                "left": 1377, 
+                "top": 602, 
+                "width": 77
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }
+          ], 
+          "frame_id": 26555944, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 1769, 
+                "top": 607, 
+                "width": 86
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 45, 
+                "left": 1637, 
+                "top": 615, 
+                "width": 15
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 30, 
+                "left": 1615, 
+                "top": 624, 
+                "width": 20
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 50, 
+                "left": 1635, 
+                "top": 609, 
+                "width": 22
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 1408, 
+                "top": 610, 
+                "width": 64
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1556, 
+                "top": 611, 
+                "width": 25
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 62, 
+                "left": 1874, 
+                "top": 603, 
+                "width": 46
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1825, 
+                "top": 609, 
+                "width": 21
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 35, 
+                "left": 1786, 
+                "top": 597, 
+                "width": 29
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 1411, 
+                "top": 592, 
+                "width": 64
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }, 
+            {
+              "bbox": {
+                "height": 21.996528656372107, 
+                "left": 1853.9931945800781, 
+                "top": 598.9930992126465, 
+                "width": 31.996530563720626
+              }, 
+              "label": "Bus", 
+              "nuro_id": 1048, 
+              "scale_id": "5f05d4f6-258b-4c36-9157-73782725de35"
+            }
+          ], 
+          "frame_id": 26560944, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1767, 
+                "top": 604, 
+                "width": 81
+              }, 
+              "label": "NO LABEL", 
+              "nuro_id": 1016, 
+              "scale_id": "1f0b02b3-775c-43e5-b07b-78a30faef8c9"
+            }, 
+            {
+              "bbox": {
+                "height": 41, 
+                "left": 1645, 
+                "top": 610, 
+                "width": 14
+              }, 
+              "label": "Pedestrian", 
+              "nuro_id": 112, 
+              "scale_id": "ef37ee78-d41e-4148-aaae-224232bb8f2a"
+            }, 
+            {
+              "bbox": {
+                "height": 27, 
+                "left": 1625, 
+                "top": 620, 
+                "width": 17
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 4, 
+              "scale_id": "0649676c-f6fa-4532-a111-fb91f9e6fe1c"
+            }, 
+            {
+              "bbox": {
+                "height": 47, 
+                "left": 1645, 
+                "top": 605, 
+                "width": 19
+              }, 
+              "label": "Pedestrian with Object", 
+              "nuro_id": 90, 
+              "scale_id": "c2e07b39-9158-49e7-b39e-8554ca7c2042"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 1435, 
+                "top": 605, 
+                "width": 58
+              }, 
+              "label": "Cars", 
+              "nuro_id": 114, 
+              "scale_id": "f34a7e6b-b50b-4c94-bf70-d6f3a3eab706"
+            }, 
+            {
+              "bbox": {
+                "height": 20, 
+                "left": 1565, 
+                "top": 606, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 0, 
+              "scale_id": "00cbed71-9ff0-40cd-a339-c278e30d9fc3"
+            }, 
+            {
+              "bbox": {
+                "height": 67, 
+                "left": 1881, 
+                "top": 598, 
+                "width": 39
+              }, 
+              "label": "Cars", 
+              "nuro_id": 60, 
+              "scale_id": "80b3f68b-894a-4378-b39a-5752f2ae445e"
+            }, 
+            {
+              "bbox": {
+                "height": 18, 
+                "left": 1825, 
+                "top": 605, 
+                "width": 23
+              }, 
+              "label": "Cars", 
+              "nuro_id": 123, 
+              "scale_id": "6ef32743-20d0-46ad-aa58-7581f28c0188"
+            }, 
+            {
+              "bbox": {
+                "height": 36, 
+                "left": 1783, 
+                "top": 592, 
+                "width": 29
+              }, 
+              "label": "Truck", 
+              "nuro_id": 23, 
+              "scale_id": "3531b238-1fb5-49f7-a4da-71c23b234974"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 1436, 
+                "top": 588, 
+                "width": 55
+              }, 
+              "label": "Truck", 
+              "nuro_id": 1017, 
+              "scale_id": "5ed3e857-4e94-439e-a928-796f7ffb69b2"
+            }, 
+            {
+              "bbox": {
+                "height": 24.947917969116247, 
+                "left": 1825.9897766113281, 
+                "top": 590.972225189209, 
+                "width": 60.98958781469719
+              }, 
+              "label": "Bus", 
+              "nuro_id": 1048, 
+              "scale_id": "5f05d4f6-258b-4c36-9157-73782725de35"
+            }
+          ], 
+          "frame_id": 26565943, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 7, 
+      "sensor_id": "toh_camera_5"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [], 
+          "frame_id": 26510186, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26515186, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26520185, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26525185, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26530185, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26535184, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26540184, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26545184, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26550183, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26555183, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 129, 
+                "left": 47, 
+                "top": 572, 
+                "width": 115
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 56, 
+              "scale_id": "7ab2b8f1-632a-48a7-b0fb-3a73690c4273"
+            }, 
+            {
+              "bbox": {
+                "height": 28, 
+                "left": 184, 
+                "top": 642, 
+                "width": 49
+              }, 
+              "label": "Cars", 
+              "nuro_id": 77, 
+              "scale_id": "a5ea1c5d-8db6-4138-8bfb-2a6366f7987f"
+            }, 
+            {
+              "bbox": {
+                "height": 39, 
+                "left": 191, 
+                "top": 624, 
+                "width": 68
+              }, 
+              "label": "Cars", 
+              "nuro_id": 52, 
+              "scale_id": "729fcf97-da2c-41f1-8081-c3a105f7ff23"
+            }, 
+            {
+              "bbox": {
+                "height": 75, 
+                "left": 277, 
+                "top": 580, 
+                "width": 106
+              }, 
+              "label": "Truck", 
+              "nuro_id": 13, 
+              "scale_id": "1cd807fe-b296-4b73-bd18-ad75b3bc0ef4"
+            }
+          ], 
+          "frame_id": 26560183, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 129, 
+                "left": 296, 
+                "top": 566, 
+                "width": 121
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 56, 
+              "scale_id": "7ab2b8f1-632a-48a7-b0fb-3a73690c4273"
+            }, 
+            {
+              "bbox": {
+                "height": 124, 
+                "left": 10, 
+                "top": 588, 
+                "width": 126
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 101, 
+              "scale_id": "def7f570-3b0d-43a4-bd61-effe82815b55"
+            }, 
+            {
+              "bbox": {
+                "height": 54, 
+                "left": 492, 
+                "top": 599, 
+                "width": 61
+              }, 
+              "label": "Cars", 
+              "nuro_id": 7, 
+              "scale_id": "09e1a113-3452-4513-be12-27274219c3ed"
+            }, 
+            {
+              "bbox": {
+                "height": 76, 
+                "left": 404, 
+                "top": 579, 
+                "width": 77
+              }, 
+              "label": "Truck", 
+              "nuro_id": 13, 
+              "scale_id": "1cd807fe-b296-4b73-bd18-ad75b3bc0ef4"
+            }
+          ], 
+          "frame_id": 26565182, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 8, 
+      "sensor_id": "toh_camera_6"
+    }, 
+    {
+      "frames": [
+        {
+          "annotations": [], 
+          "frame_id": 26510186, 
+          "linking_frame_idx": 10
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26515186, 
+          "linking_frame_idx": 11
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26520185, 
+          "linking_frame_idx": 12
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26525185, 
+          "linking_frame_idx": 13
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26530185, 
+          "linking_frame_idx": 14
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26535184, 
+          "linking_frame_idx": 15
+        }, 
+        {
+          "annotations": [], 
+          "frame_id": 26540184, 
+          "linking_frame_idx": 16
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 39, 
+                "left": 0, 
+                "top": 667, 
+                "width": 69
+              }, 
+              "label": "Cars", 
+              "nuro_id": 99, 
+              "scale_id": "dcafd145-9327-46ef-9685-da78606950a0"
+            }, 
+            {
+              "bbox": {
+                "height": 46, 
+                "left": 503, 
+                "top": 627, 
+                "width": 118
+              }, 
+              "label": "Cars", 
+              "nuro_id": 29, 
+              "scale_id": "45df75d2-2e23-415a-a628-4ca402205110"
+            }
+          ], 
+          "frame_id": 26545184, 
+          "linking_frame_idx": 17
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 52, 
+                "left": 49, 
+                "top": 674, 
+                "width": 111
+              }, 
+              "label": "Cars", 
+              "nuro_id": 99, 
+              "scale_id": "dcafd145-9327-46ef-9685-da78606950a0"
+            }, 
+            {
+              "bbox": {
+                "height": 24, 
+                "left": 620, 
+                "top": 646, 
+                "width": 83
+              }, 
+              "label": "Cars", 
+              "nuro_id": 29, 
+              "scale_id": "45df75d2-2e23-415a-a628-4ca402205110"
+            }
+          ], 
+          "frame_id": 26550183, 
+          "linking_frame_idx": 18
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 123, 
+                "left": 1492, 
+                "top": 546, 
+                "width": 77
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 56, 
+              "scale_id": "7ab2b8f1-632a-48a7-b0fb-3a73690c4273"
+            }, 
+            {
+              "bbox": {
+                "height": 116, 
+                "left": 1252, 
+                "top": 564, 
+                "width": 108
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 101, 
+              "scale_id": "def7f570-3b0d-43a4-bd61-effe82815b55"
+            }, 
+            {
+              "bbox": {
+                "height": 49, 
+                "left": 167, 
+                "top": 683, 
+                "width": 84
+              }, 
+              "label": "Cars", 
+              "nuro_id": 99, 
+              "scale_id": "dcafd145-9327-46ef-9685-da78606950a0"
+            }, 
+            {
+              "bbox": {
+                "height": 23, 
+                "left": 712, 
+                "top": 653, 
+                "width": 129
+              }, 
+              "label": "Cars", 
+              "nuro_id": 29, 
+              "scale_id": "45df75d2-2e23-415a-a628-4ca402205110"
+            }, 
+            {
+              "bbox": {
+                "height": 75, 
+                "left": 326, 
+                "top": 652, 
+                "width": 151
+              }, 
+              "label": "Cars", 
+              "nuro_id": 39, 
+              "scale_id": "5bf551cd-183a-4818-82fe-05e57c541374"
+            }
+          ], 
+          "frame_id": 26555183, 
+          "linking_frame_idx": 19
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 125, 
+                "left": 1703, 
+                "top": 538, 
+                "width": 120
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 56, 
+              "scale_id": "7ab2b8f1-632a-48a7-b0fb-3a73690c4273"
+            }, 
+            {
+              "bbox": {
+                "height": 111, 
+                "left": 1448, 
+                "top": 572, 
+                "width": 108
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 101, 
+              "scale_id": "def7f570-3b0d-43a4-bd61-effe82815b55"
+            }, 
+            {
+              "bbox": {
+                "height": 29, 
+                "left": 337, 
+                "top": 704, 
+                "width": 15
+              }, 
+              "label": "Cars", 
+              "nuro_id": 99, 
+              "scale_id": "dcafd145-9327-46ef-9685-da78606950a0"
+            }, 
+            {
+              "bbox": {
+                "height": 26, 
+                "left": 872, 
+                "top": 660, 
+                "width": 90
+              }, 
+              "label": "Cars", 
+              "nuro_id": 29, 
+              "scale_id": "45df75d2-2e23-415a-a628-4ca402205110"
+            }, 
+            {
+              "bbox": {
+                "height": 85, 
+                "left": 433, 
+                "top": 658, 
+                "width": 179
+              }, 
+              "label": "Cars", 
+              "nuro_id": 39, 
+              "scale_id": "5bf551cd-183a-4818-82fe-05e57c541374"
+            }, 
+            {
+              "bbox": {
+                "height": 13, 
+                "left": 1882, 
+                "top": 607, 
+                "width": 30
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1046, 
+              "scale_id": "f4dc36be-36cc-4b85-bd75-0da8e587d40f"
+            }, 
+            {
+              "bbox": {
+                "height": 40, 
+                "left": 1852, 
+                "top": 597, 
+                "width": 26
+              }, 
+              "label": "Cars", 
+              "nuro_id": 52, 
+              "scale_id": "729fcf97-da2c-41f1-8081-c3a105f7ff23"
+            }, 
+            {
+              "bbox": {
+                "height": 17, 
+                "left": 1880, 
+                "top": 610, 
+                "width": 17
+              }, 
+              "label": "Cars", 
+              "nuro_id": 1047, 
+              "scale_id": "19421dec-7471-4046-b91e-aefbfb66f051"
+            }
+          ], 
+          "frame_id": 26560183, 
+          "linking_frame_idx": 20
+        }, 
+        {
+          "annotations": [
+            {
+              "bbox": {
+                "height": 110, 
+                "left": 1680, 
+                "top": 561, 
+                "width": 116
+              }, 
+              "label": "Garbage Bins and Dumpsters", 
+              "nuro_id": 101, 
+              "scale_id": "def7f570-3b0d-43a4-bd61-effe82815b55"
+            }, 
+            {
+              "bbox": {
+                "height": 59, 
+                "left": 330, 
+                "top": 697, 
+                "width": 173
+              }, 
+              "label": "Cars", 
+              "nuro_id": 99, 
+              "scale_id": "dcafd145-9327-46ef-9685-da78606950a0"
+            }, 
+            {
+              "bbox": {
+                "height": 94, 
+                "left": 592, 
+                "top": 658, 
+                "width": 199
+              }, 
+              "label": "Cars", 
+              "nuro_id": 39, 
+              "scale_id": "5bf551cd-183a-4818-82fe-05e57c541374"
+            }, 
+            {
+              "bbox": {
+                "height": 65, 
+                "left": 778, 
+                "top": 667, 
+                "width": 55
+              }, 
+              "label": "Cars", 
+              "nuro_id": 24, 
+              "scale_id": "372be3c1-be85-401c-924b-09fe64e6f4c2"
+            }
+          ], 
+          "frame_id": 26565182, 
+          "linking_frame_idx": 21
+        }
+      ], 
+      "scale_camera_id": 9, 
+      "sensor_id": "toh_camera_7"
+    }
+  ], 
+  "summary": {
+    "critical_error_cnt": 2, 
+    "error_rate": 0.004357298474945534, 
+    "false_neg_cnt": 0, 
+    "false_pos_cnt": 0, 
+    "label_cnt": 459, 
+    "major_adjustment_cnt": 2, 
+    "non_critical_error_cnt": 30, 
+    "wrong_attr_cnt": 0, 
+    "wrong_class_cnt": 0
+  }, 
+  "task_id": "5cfe7749bb2dc40df778ee83"
+}
