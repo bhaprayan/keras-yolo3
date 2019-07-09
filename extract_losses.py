@@ -1,15 +1,15 @@
 import json
 import glob
-import pandas
+import pandas as pd
 import ipdb
 import csv
 
 fs = glob.glob('*yolo_data.json')
-uuid_scales = ['0_uuid', '1_uuid', '2_uuid']
-xy_loss_scales = ['0_xy_model_loss', '1_xy_model_loss', '2_xy_model_loss']
-wh_loss_scales = ['0_wh_model_loss', '1_wh_model_loss', '2_wh_model_loss']
-csv_file = csv.writer(open('subtask_losses.csv', 'w'))
-csv_file.writerow(['uuid','x_loss','y_loss','w_loss','h_loss'])
+uuid_scales = ['0_uuid','1_uuid','2_uuid']
+xy_loss_scales = ['0_xy_model_loss','1_xy_model_loss','2_xy_model_loss']
+wh_loss_scales = ['0_wh_model_loss','1_wh_model_loss','2_wh_model_loss']
+csv_file = csv.writer(open('subtask_losses.csv','w'))
+csv_file.writerow(['uuid','frame_no','subtask','x_loss','y_loss','w_loss','h_loss'])
 
 for fn in fs:
     data = json.load(open(fn))
@@ -25,6 +25,12 @@ for fn in fs:
             y_loss.extend(data[xy_loss_scales[uuid_scale_idx]][1::2]) #y loss is 2nd idx
             w_loss.extend(data[wh_loss_scales[uuid_scale_idx]][0::2]) #w loss is 1st idx
             h_loss.extend(data[wh_loss_scales[uuid_scale_idx]][1::2]) #h loss is 2nd idx
-    fn_loss = list(zip(uuids,x_loss,y_loss,w_loss,h_loss))
+    frame_n_list = [data['frame_no']] * len(uuids)
+    subtask_list = [data['subtask']] * len(uuids) 
+    fn_loss = list(zip(uuids,frame_n_list,subtask_list,x_loss,y_loss,w_loss,h_loss))
     for row in fn_loss:
         csv_file.writerow(row)
+
+dat = pd.read_csv('subtask_losses.csv')
+dat['xy_loss'] = dat['x_loss'] + dat['y_loss']
+dat['wh_loss'] = dat['w_loss'] + dat['h_loss']
