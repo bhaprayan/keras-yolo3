@@ -415,6 +415,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
     xy_grid_loss_list = []
     wh_grid_loss_list = []
     class_grid_loss_list = []
+    confidence_grid_loss_list = []
     object_mask_list = []
     yolo_outputs_list = []
 
@@ -455,6 +456,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         xy_grid_loss_list.append(xy_loss_grid)
         wh_grid_loss_list.append(wh_loss_grid)
         class_grid_loss_list.append(class_loss_grid)
+        confidence_grid_loss_list.append(confidence_loss_grid)
         object_mask_list.append(object_mask)
         yolo_outputs_list.append(yolo_outputs[l])
         
@@ -492,6 +494,9 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         class_loss_grid_0=class_grid_loss_list[0],
         class_loss_grid_1=class_grid_loss_list[1],
         class_loss_grid_2=class_grid_loss_list[2],
+        confidence_loss_grid_0=confidence_grid_loss_list[0],
+        confidence_loss_grid_1=confidence_grid_loss_list[1],
+        confidence_loss_grid_2=confidence_grid_loss_list[2],
         yolo_output_0 = yolo_outputs_list[0],
         yolo_output_1 = yolo_outputs_list[1],
         yolo_output_2 = yolo_outputs_list[2],
