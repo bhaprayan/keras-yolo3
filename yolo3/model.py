@@ -456,7 +456,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         wh_grid_loss_list.append(wh_loss_grid)
         class_grid_loss_list.append(class_loss_grid)
         object_mask_list.append(object_mask)
-        yolo_outputs_list.append(yolo_outputs[l] * object_mask)
+        yolo_outputs_list.append(yolo_outputs[l])
         
         if print_loss:
             xy_loss_grid = tf_print(xy_loss_grid, [tf.shape(xy_loss_grid)], "xy_loss_grid.shape: ") 
