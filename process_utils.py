@@ -17,3 +17,20 @@ def iou(labeled, gt):
     combined_region = a1 + a2 - overlap
     iou = overlap/combined_region
     return iou
+
+def writer(fn, data):
+    # TODO: generalize code to save lists, dicts, etc.
+    with open(fn, 'w') as f:
+        for item in data:
+            f.write("%s\n" % item)
+
+def return_annotate_dict(annotation_path):
+    """
+    Use the annotate dict to return the line number from the train file. Same for uuid file 
+    """
+    with open(annotation_path) as f:
+        annotation_lines = f.readlines()
+    annotate_dict = {}
+    for i, line in enumerate(annotation_lines):
+        annotate_dict[line.split()[0]] = i
+    return annotate_dict
