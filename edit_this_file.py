@@ -58,6 +58,11 @@ grid_mapping_full = ['0_xy_model_loss', '0_wh_model_loss', '0_class_model_loss',
         '2_xy_model_loss', '2_wh_model_loss', '2_class_model_loss', '2_confidence_model_loss',
         'model_loss_total', 'model_output_0', 'model_output_1', 'model_output_2']
 
+grid_mapping_partial = ['0_xy_model_loss', '0_wh_model_loss', '0_class_model_loss', '0_confidence_model_loss',
+        '1_xy_model_loss', '1_wh_model_loss', '1_class_model_loss', '1_confidence_model_loss',
+        '2_xy_model_loss', '2_wh_model_loss', '2_class_model_loss', '2_confidence_model_loss',
+        'model_loss_total']
+
 grid_mapping = ['0_xy_model_loss', '0_wh_model_loss', '0_class_model_loss', 
         '1_xy_model_loss', '1_wh_model_loss', '1_class_model_loss', 
         '2_xy_model_loss', '2_wh_model_loss', '2_class_model_loss', 
@@ -94,14 +99,12 @@ for i in range(n):
     
     out = sess.run(model.output, feed_dict={k:d for k, d in zip(model.input, [image_data, *y_true])})
 
-    for grid_n in range(len(grid_mapping_full)):
+    for grid_n in range(len(grid_mapping_partial)):
         # TODO: retrieve dict name mapping 
         flat_tensor = out[grid_n].flatten()
         flat_tensor = flat_tensor[np.nonzero(flat_tensor)]
-        tensor_map[grid_mapping_full[grid_n]] = flat_tensor.tolist()
+        tensor_map[grid_mapping_partial[grid_n]] = flat_tensor.tolist()
     
-    ipdb.set_trace()
-        
     obj_mask_idx = ['model_obj_mask_0', 'model_obj_mask_1', 'model_obj_mask_2']
     try:
         img_name = annotation_line.split()[0]
