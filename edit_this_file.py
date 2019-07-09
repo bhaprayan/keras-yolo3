@@ -17,10 +17,10 @@ from yolo import YOLO
 import matplotlib.pyplot as plt
 import json
 
-model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
-# model_path = 'model_data/yolo.h5'
-classes_path = 'model_data/classes.txt'
-# classes_path = 'model_data/coco_classes.txt'
+# model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
+model_path = 'model_data/yolo.h5'
+# classes_path = 'model_data/classes.txt'
+classes_path = 'model_data/coco_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 class_names = get_classes(classes_path)
 num_classes = len(class_names)
@@ -31,8 +31,9 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'filtered_subtask/subtask_5cccd2ab978aea215add0487_train.txt'
-uuid_path = 'filtered_subtask/subtask_5cccd2ab978aea215add0487_uuid.txt'
+annotation_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_train.txt'
+uuid_path = 'filtered_subtask/subtask_5cc39db8a5c183455342c266_uuid.txt' 
+
 val_split = 0.99
 with open(annotation_path) as f:
     annotation_lines = f.readlines()
