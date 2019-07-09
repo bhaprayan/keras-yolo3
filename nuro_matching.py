@@ -29,7 +29,7 @@ for report in qa_reports:
     # https://s3-us-west-1.amazonaws.com/6876.qa.report.linking/20190115_160816_00023_2646.0_2676.0_linking/qa_report.json
     # https://scale.ai/corp/compare_attempts?subtask=5cfe774faaf51a0e1c8570a7&customerTaskResponse=https://s3-us-west-1.amazonaws.com/6876.qa.report.linking/20190115_160816_00023_2646.0_2676.0_linking/qa_report.json
     try:
-        subtask_idx = report.split('?')[1].split('&')[0].split('=')[1]
+        subtask_idx = report.split('?')[1].split('&')[0].split('=')[1] # extract subtask id's from qa_reports list
         subtasks.append(subtask_idx)
     except:
         continue
@@ -47,7 +47,6 @@ for subtask_idx in subtasks[:1]:
 # extract train + uuid lines from this subtask i:
 # run model on the filtered subtask
 # extract frames corresponding to matching object id
-
 
 # grep SUBTASK_ID updated_train_nuro.txt > filtered_subtask/subtask_SUBTASK_ID_train.txt
 # grep SUBTASK_ID updated_uuid_nuro.txt > filtered_subtask/subtask_SUBTASK_ID_uuid.txt
