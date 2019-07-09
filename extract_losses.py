@@ -37,3 +37,4 @@ for fn in fs:
 dat = pd.read_csv('subtask_losses.csv')
 dat['xy_loss'] = dat['x_loss'] + dat['y_loss']
 dat['wh_loss'] = dat['w_loss'] + dat['h_loss']
+dat = dat.set_index('uuid')
