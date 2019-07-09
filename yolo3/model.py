@@ -456,7 +456,7 @@ def yolo_loss(args, anchors, num_classes, ignore_thresh=.5, print_loss=False):
         xy_grid_loss_list.append(xy_loss_grid)
         wh_grid_loss_list.append(wh_loss_grid)
         class_grid_loss_list.append(class_loss_grid)
-        confidence_grid_loss_list.append(K.sigmoid(confidence_loss_grid * object_mask))
+        confidence_grid_loss_list.append(K.sigmoid(confidence_loss_grid) * object_mask)
         object_mask_list.append(object_mask)
         yolo_outputs_list.append(yolo_outputs[l])
         
