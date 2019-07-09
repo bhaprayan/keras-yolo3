@@ -15,9 +15,9 @@ print('Computed IOU!')
 
 # merged_dat = pd.read_csv('merged_dat.txt', sep='\t')
 
-iou_gt_paths = list(set(merged_dat[merged_dat['iou'] > 0.75]['image_path']))
+iou_gt_paths = list(set(merged_dat[merged_dat['iou'] > 0.85]['image_path']))
 
-iou_lt_paths = list(set(merged_dat[merged_dat['iou'] <= 0.75]['image_path']))
+iou_lt_paths = list(set(merged_dat[merged_dat['iou'] <= 0.85]['image_path']))
 
 writer('iou_gt_paths', iou_gt_paths)
 writer('iou_lt_paths', iou_lt_paths)
@@ -32,19 +32,22 @@ good_label_uuid = open('good_label_uuid_nuro.txt', 'w')
 bad_label_train = open('bad_label_train_nuro.txt', 'w')
 bad_label_uuid = open('bad_label_uuid_nuro.txt', 'w')
 
+total_label_train = open('total_label_train_nuro.txt', 'w') 
+total_label_uuid = open('total_label_uuid_nuro.txt', 'w') 
+
 for path in iou_gt_paths:
     idx = annotate_dict[path]
     annotation = annotate_list[idx]
     uuid = uuid_list[idx]
-    good_label_train.write(annotation+'\n')
-    good_label_uuid.write(uuid+'\n')
+    good_label_train.write(annotation)
+    good_label_uuid.write(uuid)
 
 for path in iou_lt_paths:
     idx = annotate_dict[path]
     annotation = annotate_list[idx]
     uuid = uuid_list[idx]
-    bad_label_train.write(annotation+'\n')
-    bad_label_uuid.write(uuid+'\n')
+    bad_label_train.write(annotation)
+    bad_label_uuid.write(uuid)
 
 good_label_train.close()
 good_label_uuid.close()
