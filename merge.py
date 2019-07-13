@@ -1,5 +1,6 @@
 import pandas as pd
 from process_utils import iou, writer, return_annotate_dict
+import ipdb
 
 labeled_dat = pd.read_csv('labeled_nuro.txt', sep='\t')
 gt_dat = pd.read_csv('nuro_gt.txt', sep='\t')
@@ -7,7 +8,8 @@ gt_dat = pd.read_csv('nuro_gt.txt', sep='\t')
 annotation_path = 'updated_train_nuro.txt'
 uuid_path = 'updated_uuid_nuro.txt'
 
-merged_dat = gt_dat.merge(labeled_dat)
+merged_dat = pd.merge(labeled_dat, gt_dat, on=['uuid','frame_no'])
+# merged_dat = gt_dat.merge(labeled_dat)
 
 merged_dat['iou'] = merged_dat.apply(lambda row: iou((row['xmin_gt'], row['ymin_gt'], row['xmax_gt'], row['ymax_gt']), 
     (row['x_min'], row['y_min'], row['x_max'], row['y_max'])), axis=1)
@@ -17,11 +19,9 @@ print('Computed IOU!')
 
 # merged_dat = pd.read_csv('merged_dat.txt', sep='\t')
 
-iou_gt_paths = list(set(merged_dat[merged_dat['iou'] > 0.85]['image_path']))
+iou_gt_paths = list(set(merged_dat[merged_dat['iou'] > 0.75]['image_path']))
 
-iou_lt_paths = list(set(merged_dat[merged_dat['iou'] <= 0.85]['image_path']))
-
-all_paths = list(set(merged_dat['image_path']))
+iou_lt_paths = list(set(merged_dat[merged_dat['iou'] <= 0.75]['image_path']))
 
 writer('iou_gt_paths', iou_gt_paths)
 writer('iou_lt_paths', iou_lt_paths)
@@ -52,13 +52,6 @@ for path in iou_lt_paths:
     uuid = uuid_list[idx]
     bad_label_train.write(annotation)
     bad_label_uuid.write(uuid)
-
-# for path in all_paths:
-#     idx = annotate_dict[path]
-#     annotation = annotate_list[idx]
-#     uuid = uuid_list[idx]
-#     total_label_train.write(annotation)
-#     total_label_uuid.write(uuid)
 
 good_label_train.close()
 good_label_uuid.close()

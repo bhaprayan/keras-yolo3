@@ -18,9 +18,10 @@ import matplotlib.pyplot as plt
 import json
 
 # model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
-model_path = 'model_data/yolo.h5'
-# classes_path = 'model_data/classes.txt'
-classes_path = 'model_data/coco_classes.txt'
+model_path = "logs/000/ep003-loss45.538-val_loss45.596.h5"
+# model_path = 'model_data/yolo.h5'
+classes_path = 'model_data/classes.txt'
+# classes_path = 'model_data/coco_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 class_names = get_classes(classes_path)
 num_classes = len(class_names)

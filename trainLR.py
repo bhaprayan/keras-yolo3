@@ -2,14 +2,19 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
 import sklearn.metrics as metrics
 import matplotlib.pyplot as plt
+import ipdb
 
-blabels = pd.read_csv('bad_subtask_losses.csv')
-glabels = pd.read_csv('good_subtask_losses.csv')
+blabels = pd.read_csv('bad_label_losses.csv')
+glabels = pd.read_csv('good_label_losses.csv')
 
 blabels['label'] = 0
 glabels['label'] = 1
+
+glabels = glabels[glabels['confidence'] > 0.9]
+blabels = blabels[blabels['confidence'] > 0.9]
 
 train_file = pd.concat((glabels,blabels))
 
@@ -24,8 +29,11 @@ X[:,0] = train_file['xy_loss']
 y = train_file['label']
 
 clf = LogisticRegression(random_state=0, solver='lbfgs')
+# clf = SVC(probability=True)
 
 clf.fit(X,y)
+
+ipdb.set_trace()
 
 probs = clf.predict_proba(X)
 preds = probs[:,1]
