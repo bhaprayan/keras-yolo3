@@ -13,8 +13,9 @@ glabels = pd.read_csv('good_label_losses.csv')
 blabels['label'] = 0
 glabels['label'] = 1
 
-glabels = glabels[glabels['confidence'] > 0.9]
-blabels = blabels[blabels['confidence'] > 0.9]
+ipdb.set_trace()
+# glabels = glabels[glabels['confidence'] > 0.9]
+# blabels = blabels[blabels['confidence'] > 0.9]
 
 train_file = pd.concat((glabels,blabels))
 
@@ -28,12 +29,10 @@ X[:,0] = train_file['xy_loss']
 
 y = train_file['label']
 
-clf = LogisticRegression(random_state=0, solver='lbfgs')
+clf = LogisticRegression()
 # clf = SVC(probability=True)
 
 clf.fit(X,y)
-
-ipdb.set_trace()
 
 probs = clf.predict_proba(X)
 preds = probs[:,1]
