@@ -16,6 +16,7 @@ from filter_loss import filter_high_loss, filter_low_loss
 from yolo import YOLO
 import matplotlib.pyplot as plt
 import json
+import sys
 
 # model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
 model_path = "logs/000/ep003-loss45.538-val_loss45.596.h5"
@@ -31,8 +32,8 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'good_label_train_nuro.txt'
-uuid_path = 'good_label_uuid_nuro.txt' 
+annotation_path = sys.argv[1] 
+uuid_path = sys.argv[2] 
 
 val_split = 0.99
 with open(annotation_path) as f:
