@@ -8,14 +8,16 @@ gt_dat = pd.read_csv('nuro_gt.txt', sep='\t')
 annotation_path = 'updated_train_nuro.txt'
 uuid_path = 'updated_uuid_nuro.txt'
 
-merged_dat = pd.merge(labeled_dat, gt_dat, on=['uuid','frame_no'])
+merged_dat = pd.merge(labeled_dat, gt_dat, on=['uuid','frame_no', 'camera_no'])
+
+ipdb.set_trace()
 # merged_dat = gt_dat.merge(labeled_dat)
 
 merged_dat['iou'] = merged_dat.apply(lambda row: iou((row['xmin_gt'], row['ymin_gt'], row['xmax_gt'], row['ymax_gt']), 
     (row['x_min'], row['y_min'], row['x_max'], row['y_max'])), axis=1)
 
 print('Computed IOU!')
-# merged_dat.to_csv('merged_dat.txt', sep='\t')
+merged_dat.to_csv('merged_dat.txt', sep='\t')
 
 # merged_dat = pd.read_csv('merged_dat.txt', sep='\t')
 

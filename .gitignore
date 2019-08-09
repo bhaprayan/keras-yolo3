@@ -113,3 +113,9 @@ ENV/
 
 # np data file
 *npy
+
+
+bad_labels_*/
+good_labels_*/
+ious/
+locloss_data/

@@ -6,7 +6,7 @@ def iou(labeled, gt):
     x_min, y_min, x_max, y_max = labeled
     xmin_gt, ymin_gt, xmax_gt, ymax_gt = gt
     x1, y1 = max(x_min, xmin_gt), max(y_min, ymin_gt)
-    x2, y2 = min(x_max, xmax_gt), max(y_max, ymax_gt)
+    x2, y2 = min(x_max, xmax_gt), min(y_max, ymax_gt)
     width, height = x2-x1, y2-y1
     if(width > 0 and height > 0):
         overlap = width * height

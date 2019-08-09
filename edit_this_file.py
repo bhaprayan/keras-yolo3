@@ -19,9 +19,8 @@ import json
 
 # model_path = "logs/000/ep009-loss30.814-val_loss30.951.h5"
 model_path = "logs/000/ep003-loss45.538-val_loss45.596.h5"
-# model_path = 'model_data/yolo.h5'
+# model_path = 'model_data/yolo_weights.h5'
 classes_path = 'model_data/classes.txt'
-# classes_path = 'model_data/coco_classes.txt'
 anchors_path = 'model_data/yolo_anchors.txt'
 class_names = get_classes(classes_path)
 num_classes = len(class_names)
@@ -32,8 +31,8 @@ input_shape = (416,416)
 model = create_locloss_model(input_shape, anchors, num_classes, freeze_body=2, weights_path=model_path, grid_loss=True)
 sess = K.get_session()
 
-annotation_path = 'bad_label_train_nuro.txt'
-uuid_path = 'bad_label_uuid_nuro.txt' 
+annotation_path = 'good_label_train_nuro.txt'
+uuid_path = 'good_label_uuid_nuro.txt' 
 
 val_split = 0.99
 with open(annotation_path) as f:

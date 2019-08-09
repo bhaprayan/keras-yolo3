@@ -13,18 +13,20 @@ glabels = pd.read_csv('good_label_losses.csv')
 blabels['label'] = 0
 glabels['label'] = 1
 
-ipdb.set_trace()
-# glabels = glabels[glabels['confidence'] > 0.9]
-# blabels = blabels[blabels['confidence'] > 0.9]
+glabels = glabels[glabels['confidence'] > 0.9]
+blabels = blabels[blabels['confidence'] > 0.9]
 
 train_file = pd.concat((glabels,blabels))
 
 train_file['xy_loss'] = train_file['x_loss'] + train_file['y_loss']
 train_file['wh_loss'] = train_file['w_loss'] + train_file['h_loss']
 
-X = np.empty(shape=(train_file['xy_loss'].shape[0],1))
+train_file['total_loss'] = train_file['xy_loss'] + train_file['wh_loss']
 
-X[:,0] = train_file['xy_loss']
+train_file.replace([np.inf], np.nan).dropna(subset=['total_loss'], how='all')
+X = np.empty(shape=(train_file['total_loss'].shape[0],1))
+
+# X[:,0] = train_file['xy_loss']
 # X[:,1] = train_file['wh_loss']
 
 y = train_file['label']

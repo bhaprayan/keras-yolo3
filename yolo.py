@@ -20,11 +20,11 @@ from keras.utils import multi_gpu_model
 
 class YOLO(object):
     _defaults = {
-        "model_path": 'logs/000/ep009-loss30.814-val_loss30.951.h5',
-        # "model_path": 'model_data/yolo_weights.h5',
+        # "model_path": 'logs/000/ep003-loss45.538-val_loss45.596.h5',
+        "model_path": 'model_data/yolo_weights.h5',
         "anchors_path": 'model_data/yolo_anchors.txt',
-        # "classes_path": 'model_data/coco_classes.txt',
-        "classes_path": 'model_data/classes.txt',
+        "classes_path": 'model_data/coco_classes.txt',
+        # "classes_path": 'model_data/classes.txt',
         "score" : 0.3,
         "iou" : 0.5,
         "model_image_size" : (416, 416),
@@ -133,6 +133,8 @@ class YOLO(object):
                     size=np.floor(3e-2 * image.size[1] + 0.5).astype('int32'))
         thickness = (image.size[0] + image.size[1]) // 300
 
+        predictions = []
+
         for i, c in reversed(list(enumerate(out_classes))):
             predicted_class = self.class_names[c]
             box = out_boxes[i]
@@ -149,6 +151,7 @@ class YOLO(object):
             right = min(image.size[0], np.floor(right + 0.5).astype('int32'))
             print(label, (left, top), (right, bottom))
 
+            predictions.append(','.join((list(map(lambda x: str(x), [left,top,right,bottom,c,score])))))
             if top - label_size[1] >= 0:
                 text_origin = np.array([left, top - label_size[1]])
             else:
@@ -167,7 +170,7 @@ class YOLO(object):
 
         end = timer()
         print(end - start)
-        return image
+        return image 
 
     def detect_image_bboxes(self, image, true_boxes):
         # modified function to also plot ground truth bboxes along /w predictions
